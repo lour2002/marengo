@@ -31,8 +31,8 @@
               <div>
                   <select>
                       <option value="uk">Укр</option>
-                      <option value="ru">Рос</option>
-                      <option value="en">Англ</option>
+                      <option value="ru">Рус</option>
+                      <option value="en">Eng</option>
                   </select>
               </div>
             </nav>
@@ -40,28 +40,26 @@
             <button type="button">Меню</button>
             <div>
                 <div>
-                    {{-- TODO: localisation --}}
-                    <label for="drink-vermouth">Вермути</label>
-                    {{-- TODO: localisation --}}
-                    <label for="drink-sparkling">Ігристі</label>
+                    <label for="drink-vermouth">{{ __('Вермути') }}</label>
+                    <label for="drink-sparkling">{{ __('Ігристі') }}</label>
                 </div>
                 <div>
                     <ul>
                         <li>
-                            <a href="#">Продукція</a>
+                            <a href="#">{{ __('Продукція') }}</a>
                         </li>
                         <li>
-                            <a href="#">Коктейлі</a>
+                            <a href="#">{{ __('Коктейлі') }}</a>
                         </li>
                         <li>
-                            <a href="#">Історія</a>
+                            <a href="#">{{ __('Історія') }}</a>
                         </li>
                     </ul>
                 </div>
                 <ul>
-                    <li data-value="uk">Укр</li>
-                    <li data-value="ru">Рос</li>
-                    <li data-value="en">Англ</li>
+                    <li data-value="uk"><a href="/">Укр</a></li>
+                    <li data-value="ru"><a href="/ru">Рус</a></li>
+                    <li data-value="en"><a href="/en">Eng</a></li>
                 </ul>
                 <x-socials />
             </div>
@@ -70,8 +68,7 @@
             <h1 class="visually-hidden"></h1>
             <div>
                 <section>
-                    {{-- TODO: localisation --}}
-                    <h2 class="visually-hidden">Вермути</h2>
+                    <h2 class="visually-hidden">{{ __("Вермути") }}</h2>
                     <div>
                         {{-- BIG / Tablet/ Phone --}}
 
@@ -124,25 +121,21 @@
                                 <p>Вміст цукру: 16 % мас</p>
                                 <p>Місткість: 0,5 л; 1,0 л</p>
                             </div>
-                            {{-- TODO: localisation --}}
-                            <button type="button">Купить</button>
-                            {{-- TODO: localisation --}}
-                            <button type="button">Коктейли</button>
+                            <button type="button">{{ __('Купити') }}</button>
+                            <button type="button">{{ __('Коктейлі') }}</button>
                         </div>
                     </div>
 
                 </section>
                 <section>
-                    {{-- TODO: localisation --}}
-                    <h2 class="visually-hidden">Ігристі</h2>
+                    <h2 class="visually-hidden">{{ __('Ігристі') }}</h2>
                     <div>
                         <h3></h3>
                     </div>
                 </section>
             </div>
             <section>
-                {{-- TODO: localisation --}}
-                <h2 class="visually-hidden">Продукція</h2>
+                <h2 class="visually-hidden">{{ __('Продукція') }}</h2>
                 <ul>
                     <li>
                         <figure>
@@ -155,11 +148,9 @@
                 </ul>
             </section>
             <section>
-                {{-- TODO: localisation --}}
-                <h2 class="visually-hidden">Коктейлі</h2>
+                <h2 class="visually-hidden">{{ __('Коктейлі') }}</h2>
                 <select>
-                    {{-- TODO: localisation --}}
-                    <option value="all">Усі коктейлі</option>
+                    <option value="all">{{ __('Усі коктейлі') }}</option>
                     <option value="marengo-mojito">Marengo Mojito</option>
                 </select>
                 <ul>
@@ -271,19 +262,15 @@
             {{-- TODO: entities [text] --}}
             <p>ВИ ПОВИННІ ВІДПОВІДАТИ ЮРИДИЧНОМУ <br> ВІКУ, ЩОБ ЗАЙТИ НА ДАНИЙ САЙТ</p>
 
+            <p>{{ __('Вам уже виповнилося 18 років?') }}</p>
+            <button type="button">{{ __('Ні') }}</button>
+            <button type="button">{{ __('Так') }}</button>
             {{-- TODO: localisation --}}
-            <p>Вам уже виповнилося 18 років?</p>
-            {{-- TODO: localisation --}}
-            <button type="button">Ні</button>
-            {{-- TODO: localisation --}}
-            <button type="button">Так</button>
-            {{-- TODO: localisation --}}
-            <p>Виберіть мову сайту</p>
-            {{-- TODO: localisation --}}
+            <p>{{ __('Виберіть мову сайту') }}</p>
             <select>
                 <option value="uk">Українська</option>
-                <option value="ru">Російська</option>
-                <option value="en">Англійська</option>
+                <option value="ru">Русский</option>
+                <option value="en">English</option>
             </select>
             <br>
             {{-- TODO: entities [text] --}}

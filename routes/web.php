@@ -13,4 +13,4 @@ use App\Http\Controllers\MainPage;
 |
 */
 
-Route::get('/', MainPage::class);
+Route::get('/{locale?}', MainPage::class);
