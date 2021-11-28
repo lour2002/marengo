@@ -6,110 +6,294 @@
 
         <title>Marengo</title>
 
-        <!-- Fonts -->
+        {{-- Fonts --}}
 
-        <!-- Styles -->
+        {{-- Styles --}}
     </head>
     <body>
-        <header>
+        <input name="type-drink" id="drink-vermouth" type="radio" class="visually-hidden">
+        <input name="type-drink" id="drink-sparkling" type="radio" class="visually-hidden">
+        <header class="main-header">
             {{-- Desktop --}}
-            <div>
-                <div>
-                    <a href="#">Продукція</a>
-                    <a href="#">Коктейлі</a>
-                    <a href="#">Історія</a>
-                </div>
-                <img src="" width="204" height="72" alt="Marengo">
-                <div>
-                    <button type="button">Вермути</button>
-                    <button type="button">Ігристі</button>
-                </div>
-            </div>
-            <div>
-                <select>
-                    <option value="uk">Укр</option>
-                    <option value="ru">Рос</option>
-                    <option value="en">Англ</option>
-                </select>
-            </div>
+            <nav>
+              <div>
+                  <div>
+                      <a href="#">Продукція</a>
+                      <a href="#">Коктейлі</a>
+                      <a href="#">Історія</a>
+                  </div>
+                  <img src="" width="204" height="72" alt="Marengo">
+                  <div>
+                      <button type="button">Вермути</button>
+                      <button type="button">Ігристі</button>
+                  </div>
+              </div>
+              <div>
+                  <select>
+                      <option value="uk">Укр</option>
+                      <option value="ru">Рос</option>
+                      <option value="en">Англ</option>
+                  </select>
+              </div>
+            </nav>
             {{-- Mobile --}}
-            <button type="button"></button>
+            <button type="button">Меню</button>
             <div>
                 <div>
-                    <button type="button">Вермути</button>
-                    <button type="button">Ігристі</button>
+                    {{-- TODO: localisation --}}
+                    <label for="drink-vermouth">Вермути</label>
+                    {{-- TODO: localisation --}}
+                    <label for="drink-sparkling">Ігристі</label>
                 </div>
                 <div>
-                    <a href="#">Продукція</a>
-                    <a href="#">Коктейлі</a>
-                    <a href="#">Історія</a>
+                    <ul>
+                        <li>
+                            <a href="#">Продукція</a>
+                        </li>
+                        <li>
+                            <a href="#">Коктейлі</a>
+                        </li>
+                        <li>
+                            <a href="#">Історія</a>
+                        </li>
+                    </ul>
                 </div>
                 <ul>
                     <li data-value="uk">Укр</li>
                     <li data-value="ru">Рос</li>
                     <li data-value="en">Англ</li>
                 </ul>
-                <div>
-                    <!-- TODO: Fields [link, title, icon] -->
-                    <a href="/" title="Facebook">
-                        <img src="" width="31" height="31" alt="Facebook">
-                    </a>
-                    <!-- TODO: Fields [link, title, icon] -->
-                    <a href="/" title="Instagram">
-                        <img src="" width="31" height="31" alt="Instagram">
-                    </a>
-                    <!-- TODO: Fields [link, title, icon] -->
-                    <a href="/" title="Youtube">
-                        <img src="" width="45" height="32" alt="Youtube">
-                    </a>
-                </div>
+                <x-socials />
             </div>
         </header>
-        <main>
-            <section></section>
-            <section></section>
-            <section></section>
+        <main class="main-content">
+            <h1 class="visually-hidden"></h1>
+            <div>
+                <section>
+                    {{-- TODO: localisation --}}
+                    <h2 class="visually-hidden">Вермути</h2>
+                    <div>
+                        {{-- BIG / Tablet/ Phone --}}
 
+                        <picture>
+                            {{-- TODO: entities [img] --}}
+                            <source srcset="" media="" sizes="">
+                            {{-- TODO: entities [img] --}}
+                            <source srcset="" media="" sizes="">
+                            {{-- TODO: entities [img] --}}
+                            <source srcset="" media="" sizes="">
+                            {{-- TODO: entities [img, string] --}}
+                            <img src="" alt="Marengo Mojito">
+                        </picture>
+
+                        {{-- Bottle --}}
+                        <picture>
+                            {{-- TODO: entities [img] --}}
+                            <source srcset="" media="" sizes="">
+                            {{-- TODO: entities [img] --}}
+                            <source srcset="" media="" sizes="">
+                            {{-- TODO: entities [img] --}}
+                            <source srcset="" media="" sizes="">
+                            {{-- TODO: entities [img, string] --}}
+                            <img src="" alt="Marengo Mojito">
+                        </picture>
+
+                        {{-- SMALL --}}
+                        <picture>
+                            {{-- TODO: entities [img] --}}
+                            <source srcset="" media="" sizes="">
+                            {{-- TODO: entities [img] --}}
+                            <source srcset="" media="" sizes="">
+                            {{-- TODO: entities [img] --}}
+                            <source srcset="" media="" sizes="">
+                            {{-- TODO: entities [img, string] --}}
+                            <img src="" alt="Marengo Mojito">
+                        </picture>
+                        <div>
+                            {{-- TODO: entities [string] --}}
+                            <h3>Marengo Mojito</h3>
+                            {{-- TODO: entities [text] --}}
+                            <div>
+                                <p>Відчуйте справжній смак Куби у вашому келиху!</p>
+                                <p>Ароматний, свіжий та соковитий, з довгим м’ятно-лаймовим післясмаком та легкою солодкістю, створений освіжати і тонізувати під час літньої спеки — це все про MARENGO MOJITO!</p>
+                                <br>
+                                <p>Виготовлений за новітньою рецептурою, цей вермут — справжній король літнього відпочинку і пляжних вечірок. Прекрасно поєднується з льодом, фруктами, легкими десертами та драйвовую музикою.</p>
+                                <br>
+                                <p>Температура подачі вермуту/коктейлю: 10-15 °С</p>
+                                <p>Вміст спирту: 15 % об</p>
+                                <p>Вміст цукру: 16 % мас</p>
+                                <p>Місткість: 0,5 л; 1,0 л</p>
+                            </div>
+                            {{-- TODO: localisation --}}
+                            <button type="button">Купить</button>
+                            {{-- TODO: localisation --}}
+                            <button type="button">Коктейли</button>
+                        </div>
+                    </div>
+
+                </section>
+                <section>
+                    {{-- TODO: localisation --}}
+                    <h2 class="visually-hidden">Ігристі</h2>
+                    <div>
+                        <h3></h3>
+                    </div>
+                </section>
+            </div>
             <section>
+                {{-- TODO: localisation --}}
+                <h2 class="visually-hidden">Продукція</h2>
+                <ul>
+                    <li>
+                        <figure>
+                            {{-- TODO: entities [img] --}}
+                            <img src="" alt="Marengo Mojito">
+                            {{-- TODO: entities [string] --}}
+                            <figcaption class="visually-hidden">Marengo Mojito</figcaption>
+                        </figure>
+                    </li>
+                </ul>
+            </section>
+            <section>
+                {{-- TODO: localisation --}}
+                <h2 class="visually-hidden">Коктейлі</h2>
+                <select>
+                    {{-- TODO: localisation --}}
+                    <option value="all">Усі коктейлі</option>
+                    <option value="marengo-mojito">Marengo Mojito</option>
+                </select>
+                <ul>
+                    <li>
+                        {{-- TODO: entities [img] --}}
+                        <img src="" alt="">
+                        <article>
+                            {{-- TODO: entities [img] --}}
+                            <img src="" alt="">
+                            <div>
+                                {{-- TODO: entities [string] --}}
+                                <h3>Сицилия Sicilia</h3>
+                                {{-- TODO: entities [text] --}}
+                                <p>Сонячна Сицилія славиться своїми садами сицилійських апельсинів. Саме вони надихнули мастера Marengo (NAME) на створення вермута Di Fiore.</p>
+                                <p>Коктейль на основі Di Fiore поєднує в собі шарм Середземного моря Італії, перчинку вулкана Етна і пряний цитрусовий смак.</p>
+
+                                {{-- TODO: entities [recipe] --}}
+                                <table>
+                                    {{-- TODO: entities [ingrifient] --}}
+                                    <tr>
+                                        <td>80 мл</td>
+                                        <td>Вермут Marengo Di Fiore</td>
+                                    </tr>
+                                    <tr>
+                                        <td>20 мл</td>
+                                        <td>Кордіал сицилійського апельсина копчений</td>
+                                    </tr>
+                                    <tr>
+                                        <td>5 г</td>
+                                        <td>
+                                            Сироп гвоздики та перцю
+                                            <div></div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>30 г</td>
+                                        <td>Грейпфрут палений</td>
+                                    </tr>
+                                </table>
+                                <p>Наповніть винний келих доверху кубиками льоду, залийте всі інгредієнти і перемішайте барною ложкою.</p>
+                            </div>
+
+                            {{-- TODO: entities [recipe] --}}
+                            <div>
+                                {{-- TODO: entities [string] --}}
+                                <h4>Сироп гвоздики та перцю</h4>
+                                {{-- TODO: entities [text] --}}
+                                <p>Нам понадобится, что бы приготовить этот ароматный и пряный сироп на 1 л, это всего:</p>
+
+                                {{-- TODO: entities [recipe] --}}
+                                <table>
+                                    {{-- TODO: entities [ingrifient] --}}
+                                    <tr>
+                                        {{-- TODO: entities [string] --}}
+                                        <td>20 г</td>
+                                        {{-- TODO: entities [string] --}}
+                                        <td>Гвоздика</td>
+                                    </tr>
+                                    <tr>
+                                        <td>30 г</td>
+                                        <td>Перемолотый чёрный перц</td>
+                                    </tr>
+                                    <tr>
+                                        <td>600 г</td>
+                                        <td>Сахар</td>
+                                    </tr>
+                                    <tr>
+                                        <td>800 г</td>
+                                        <td>Вода фильтрованная</td>
+                                    </tr>
+                                </table>
+                                {{-- TODO: entities [text] --}}
+                                <ul>
+                                    <li>Смешать специи с фильтрованной водой</li>
+                                    <li>Проварить всего 5мин на маленьком огне</li>
+                                    <li>Отфильтровать и добавить Сахар</li>
+                                    <li>Растворить, так же на маленьком огне</li>
+                                    <li>Охладить и наслаждаться этим ингредиентом в коктейле Сицилия</li>
+                                </ul>
+                            </div>
+                        </article>
+                    </li>
+                </ul>
+            </section>
+
+            {{-- TODO: entities [img] --}}
+            <section style="background-image: url('')">
                 <div>
-                    <!-- TODO: Fields [title] -->
+                    {{-- TODO: entities [string] --}}
                     <h2>Історія MARENGO</h2>
-                    <!-- TODO: Fields [text] -->
+                    {{-- TODO: entities [text] --}}
                     <p>История нашего бренда началась в 2001 году, когда была разлита первая бутылка Marengo на винзаводе Коблево. Сама идея создания высококачественного вермута появилась с момента основания завода в 1982 году.  Именно поэтому на символике Marengo выбита эта цифра.</p>
                     <p>Основным ингредиентом нашего вермута является виноград, из которого мы производим вино высочайшего качества для приготовления Marengo. Наши технологи долго экспериментировали с различными сортами европейского винограда и разнообразным сочетанием трав и пряностей, чтобы получить сбалансированный вкус и аромат, которым вы наслаждаетесь. </p>
                     <p>История нашего бренда началась в 2001 году, когда была разлита первая бутылка Marengo на винзаводе Коблево. Сама идея создания высококачественного вермута появилась с момента основания завода в 1982 году.  Именно поэтому на символике Marengo выбита эта цифра.</p>
                 </div>
-                <!-- TODO: Fields [] -->
-                <img src="" alt="Пейзаж" width="100%" load="lazy">
             </section>
         </main>
-        <footer>
+        <footer class="main-footer">
             <div>
-                <div>
-                    <!-- TODO: Fields [link, title] -->
-                    <a href="/" title="Положення та умови">Положення та умови</a>
-                    <!-- TODO: Fields [link, title] -->
-                    <a href="/" title="Політика кондефіційності">Політика кондефіційності</a>
-                    <!-- TODO: Fields [link, title] -->
-                    <a href="/" title="Політика Cookies">Політика Cookies</a>
-                </div>
+                <x-doc-list />
                 <img src="" width="163" height="58" alt="Marengo">
-                <div>
-                    <!-- TODO: Fields [link, title, icon] -->
-                    <a href="/" title="Facebook">
-                        <img src="" load="lazy" width="45" height="32" alt="Facebook">
-                    </a>
-                    <!-- TODO: Fields [link, title, icon] -->
-                    <a href="/" title="Instagram">
-                        <img src="" load="lazy" width="45" height="32" alt="Instagram">
-                    </a>
-                    <!-- TODO: Fields [link, title, icon] -->
-                    <a href="/" title="Youtube">
-                        <img src="" load="lazy" width="45" height="32" alt="Youtube">
-                    </a>
-                </div>
+                <x-socials />
             </div>
         </footer>
-    <!-- Scripts -->
+        {{-- Modal 18+ --}}
+        {{-- TODO: entities [img] --}}
+        <div style="background-image: url()">
+            <img src="" width="284" height="100" alt="Marengo">
+            {{-- TODO: entities [text] --}}
+            <p>ВИ ПОВИННІ ВІДПОВІДАТИ ЮРИДИЧНОМУ <br> ВІКУ, ЩОБ ЗАЙТИ НА ДАНИЙ САЙТ</p>
+
+            {{-- TODO: localisation --}}
+            <p>Вам уже виповнилося 18 років?</p>
+            {{-- TODO: localisation --}}
+            <button type="button">Ні</button>
+            {{-- TODO: localisation --}}
+            <button type="button">Так</button>
+            {{-- TODO: localisation --}}
+            <p>Виберіть мову сайту</p>
+            {{-- TODO: localisation --}}
+            <select>
+                <option value="uk">Українська</option>
+                <option value="ru">Російська</option>
+                <option value="en">Англійська</option>
+            </select>
+            <br>
+            {{-- TODO: entities [text] --}}
+            <p>Цей сайт призначений для особистого використання особами, яким на законних підставах дозволено купувати та вживати алкогольні напої в Україні.</p>
+            {{-- TODO: entities [text] --}}
+            <p>Входячи на цей сайт, ви погоджуєтесь з нашими <a href="">умовами використання</a> та <a href="">політикою конфіденційності</a>.</p>
+            {{-- TODO: entities [text] --}}
+            <p>Насолоджуйтесь відповідально.</p>
+            <p>© {{ now()->year }} MARENGO </p>
+        </div>
+        {{-- Scripts --}}
     </body>
 </html>
