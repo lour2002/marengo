@@ -18,14 +18,14 @@
             <nav>
               <div>
                   <div>
-                      <a href="#">Продукція</a>
-                      <a href="#">Коктейлі</a>
-                      <a href="#">Історія</a>
+                      <a href="#products">{{ __('Продукція') }}</a>
+                      <a href="#coctails">{{ __('Коктейлі') }}</a>
+                      <a href="#history">{{ __('Історія') }}</a>
                   </div>
-                  <img src="" width="204" height="72" alt="Marengo">
+                  <a href="#top"><img src="" width="204" height="72" alt="Marengo"></a>
                   <div>
-                      <button type="button">Вермути</button>
-                      <button type="button">Ігристі</button>
+                      <button type="button">{{ __('Вермути') }}</button>
+                      <button type="button">{{ __('Ігристі') }}</button>
                   </div>
               </div>
               <div>
@@ -66,7 +66,7 @@
         </header>
         <main class="main-content">
             <h1 class="visually-hidden"></h1>
-            <div>
+            <div id="top">
                 <section>
                     <h2 class="visually-hidden">{{ __("Вермути") }}</h2>
                     <div>
@@ -134,7 +134,7 @@
                     </div>
                 </section>
             </div>
-            <section>
+            <section id="products">
                 <h2 class="visually-hidden">{{ __('Продукція') }}</h2>
                 <ul>
                     <li>
@@ -147,7 +147,7 @@
                     </li>
                 </ul>
             </section>
-            <section>
+            <section id="coctails">
                 <h2 class="visually-hidden">{{ __('Коктейлі') }}</h2>
                 <select>
                     <option value="all">{{ __('Усі коктейлі') }}</option>
@@ -237,7 +237,7 @@
             </section>
 
             {{-- TODO: entities [img] --}}
-            <section style="background-image: url('')">
+            <section id="history" style="background-image: url('')">
                 <div>
                     {{-- TODO: entities [string] --}}
                     <h2>Історія MARENGO</h2>

@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MainPage;
+use App\Http\Middleware\CheckLanguage;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,4 +14,4 @@ use App\Http\Controllers\MainPage;
 |
 */
 
-Route::get('/{locale?}', MainPage::class);
+Route::get('/{locale?}', MainPage::class)->middleware(CheckLanguage::class);
