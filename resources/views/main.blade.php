@@ -65,13 +65,15 @@
             </div>
         </header>
         <main class="main-content">
-            <h1 class="visually-hidden"></h1>
+            <h1 class="visually-hidden">Marengo</h1>
             <div id="top">
                 <section>
                     <h2 class="visually-hidden">{{ __("Вермути") }}</h2>
+                    <ul>
+                        <li></li>
+                    </ul>
                     <div>
-                        {{-- BIG / Tablet/ Phone --}}
-
+                        {{-- Tablet / Phone --}}
                         <picture>
                             {{-- TODO: entities [img] --}}
                             <source srcset="" media="" sizes="">
@@ -82,6 +84,22 @@
                             {{-- TODO: entities [img, string] --}}
                             <img src="" alt="Marengo Mojito">
                         </picture>
+
+                        {{-- BIG Video / Image --}}
+
+                        <picture>
+                            {{-- TODO: entities [img] --}}
+                            <source srcset="" media="" sizes="">
+                            {{-- TODO: entities [img] --}}
+                            <source srcset="" media="" sizes="">
+                            {{-- TODO: entities [img] --}}
+                            <source srcset="" media="" sizes="">
+                            {{-- TODO: entities [img , string] --}}
+                            <img src="" alt="Marengo Mojito">
+                        </picture>
+
+                        <video src="">
+                        </video>
 
                         {{-- Bottle --}}
                         <picture>
@@ -121,21 +139,20 @@
                                 <p>Вміст цукру: 16 % мас</p>
                                 <p>Місткість: 0,5 л; 1,0 л</p>
                             </div>
-                            <button type="button">{{ __('Купити') }}</button>
-                            <button type="button">{{ __('Коктейлі') }}</button>
+                            {{-- TODO: entities [link] --}}
+                            <a href="#">{{ __('Купити') }}</a>
+                            <a href="#">{{ __('Коктейлі') }}</a>
                         </div>
                     </div>
 
                 </section>
                 <section>
                     <h2 class="visually-hidden">{{ __('Ігристі') }}</h2>
-                    <div>
-                        <h3></h3>
-                    </div>
                 </section>
             </div>
             <section id="products">
                 <h2 class="visually-hidden">{{ __('Продукція') }}</h2>
+                <button type="button" disabled><</button>
                 <ul>
                     <li>
                         <figure>
@@ -146,6 +163,7 @@
                         </figure>
                     </li>
                 </ul>
+                <button type="button">></button>
             </section>
             <section id="coctails">
                 <h2 class="visually-hidden">{{ __('Коктейлі') }}</h2>
@@ -153,6 +171,7 @@
                     <option value="all">{{ __('Усі коктейлі') }}</option>
                     <option value="marengo-mojito">Marengo Mojito</option>
                 </select>
+                <button type="button" disabled><</button>
                 <ul>
                     <li>
                         {{-- TODO: entities [img] --}}
@@ -182,7 +201,7 @@
                                         <td>5 г</td>
                                         <td>
                                             Сироп гвоздики та перцю
-                                            <div></div>
+                                            <button>*</button>
                                         </td>
                                     </tr>
                                     <tr>
@@ -234,6 +253,7 @@
                         </article>
                     </li>
                 </ul>
+                <button type="button">></button>
             </section>
 
             {{-- TODO: entities [img] --}}
