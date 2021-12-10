@@ -1,3 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body {
+  font-family: 'Montserrat', 'Arial', 'sans-serif'
+}
+
 /* helpers */
 .visually-hidden {
   position: absolute;
@@ -9,4 +17,8 @@
 
 [hidden] {
   display: none;
+}
+
+.image-background {
+  @apply bg-center bg-no-repeat bg-cover;
 }

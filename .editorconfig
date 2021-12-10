@@ -28,7 +28,7 @@ indent_size = 2
 indent_size = 4
 
 [*.php]
-indent_size = 4
+indent_size = 2
 
 [*.blade.php]
 indent_size = 4
@@ -37,4 +37,7 @@ indent_size = 4
 indent_size = 2
 
 [*.scss]
+indent_size = 2
+
+[*.css]
 indent_size = 2
