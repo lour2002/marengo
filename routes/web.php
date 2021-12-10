@@ -13,5 +13,5 @@ use App\Http\Middleware\CheckLanguage;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/{locale?}', MainPage::class)->middleware(CheckLanguage::class);
+// TODO: uncommitted for step 2
+Route::get('/{locale?}', MainPage::class) /*->middleware(CheckLanguage::class)*/;

@@ -56,11 +56,12 @@
                         </li>
                     </ul>
                 </div>
-                <ul>
-                    <li data-value="uk"><a href="/">Укр</a></li>
-                    <li data-value="ru"><a href="/ru">Рус</a></li>
-                    <li data-value="en"><a href="/en">Eng</a></li>
-                </ul>
+                {{-- TODO: uncommited for step 2 --}}
+{{--                <ul>--}}
+{{--                    <li data-value="uk"><a href="/">Укр</a></li>--}}
+{{--                    <li data-value="ru"><a href="/ru">Рус</a></li>--}}
+{{--                    <li data-value="en"><a href="/en">Eng</a></li>--}}
+{{--                </ul>--}}
                 <x-socials />
             </div>
         </header>
@@ -167,10 +168,11 @@
             </section>
             <section id="coctails">
                 <h2 class="visually-hidden">{{ __('Коктейлі') }}</h2>
-                <select>
-                    <option value="all">{{ __('Усі коктейлі') }}</option>
-                    <option value="marengo-mojito">Marengo Mojito</option>
-                </select>
+{{-- TODO: uncommited for step 2 --}}
+{{--                <select>--}}
+{{--                    <option value="all">{{ __('Усі коктейлі') }}</option>--}}
+{{--                    <option value="marengo-mojito">Marengo Mojito</option>--}}
+{{--                </select>--}}
                 <button type="button" disabled><</button>
                 <ul>
                     <li>
@@ -287,11 +289,12 @@
             <button type="button">{{ __('Так') }}</button>
             {{-- TODO: localisation --}}
             <p>{{ __('Виберіть мову сайту') }}</p>
-            <select>
-                <option value="uk">Українська</option>
-                <option value="ru">Русский</option>
-                <option value="en">English</option>
-            </select>
+{{-- TODO: uncommented for step 2 --}}
+{{--            <select>--}}
+{{--                <option value="uk">Українська</option>--}}
+{{--                <option value="ru">Русский</option>--}}
+{{--                <option value="en">English</option>--}}
+{{--            </select>--}}
             <br>
             {{-- TODO: entities [text] --}}
             <p>Цей сайт призначений для особистого використання особами, яким на законних підставах дозволено купувати та вживати алкогольні напої в Україні.</p>

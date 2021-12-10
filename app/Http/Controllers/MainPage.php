@@ -14,6 +14,10 @@ class MainPage extends Controller
    */
   public function __invoke(Request $request)
   {
+    app()->setLocale('uk');
+
+    abort_if($request->locale, 404);
+
     return view('main');
   }
 }
