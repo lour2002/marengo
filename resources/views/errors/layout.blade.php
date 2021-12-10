@@ -15,10 +15,14 @@
             html, body {
                 background-color: #fff;
                 color: #636b6f;
-                font-family: 'Nunito', sans-serif;
+                font-family: 'Montserrat', sans-serif;
                 font-weight: 100;
                 height: 100vh;
                 margin: 0;
+
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
             }
 
             .full-height {
@@ -45,10 +49,12 @@
             }
         </style>
     </head>
-    <body>
+    {{-- TODO: entities [img] --}}
+    <body style="background-image: url('/images/background.png')">
         <div class="flex-center position-ref full-height">
-            <div class="content">
+            <div class="content" >
                 <p class="title"> @yield('code') </p>
+                {{-- TODO: entities [text] --}}
                 <p>@yield('message')</p>
 
                 <a href="/">{{ __('error.link') }}</a>
