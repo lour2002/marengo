@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 html, body {
-  font-family: 'Montserrat', 'Arial', 'sans-serif'
+  @apply font-sans;
 }
 
 /* helpers */
@@ -21,4 +21,16 @@ html, body {
 
 .image-background {
   @apply bg-center bg-no-repeat bg-cover;
+}
+
+.link {
+  @apply no-underline hover:underline;
+}
+
+input#sparkling:checked ~ .main-header [for='sparkling'] {
+  @apply bg-red text-white active:bg-white;
+}
+
+input#vermouth:checked ~ .main-header [for='vermouth'] {
+  @apply bg-red text-white active:bg-white;
 }
