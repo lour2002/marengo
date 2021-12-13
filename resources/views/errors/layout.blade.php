@@ -39,13 +39,38 @@
                 position: relative;
             }
 
-            .content {
-                text-align: center;
-            }
 
             .title {
-                font-size: 36px;
-                padding: 20px;
+                font-family: Montserrat;
+                font-style: normal;
+                font-weight: bold;
+                font-size: 400px;
+                line-height: 488px;
+                color: transparent;
+                /* identical to box height */
+                -webkit-text-stroke: 5px #182857;
+                margin: 1rem 0;
+            }
+            .message {
+                font-family: Montserrat;
+                font-style: normal;
+                font-weight: 600;
+                font-size: 24px;
+                line-height: 29px;
+                color: #182857;
+            }
+
+            .link {
+                display: inline-block;
+                font-family: Montserrat;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 20px;
+                line-height: 24px;
+                text-align: center;
+                color: #FFFFFF;
+                background-color: #182857;
+                text-decoration: none;
             }
         </style>
     </head>
@@ -55,9 +80,9 @@
             <div class="content" >
                 <p class="title"> @yield('code') </p>
                 {{-- TODO: entities [text] --}}
-                <p>@yield('message')</p>
+                <p class="message">@yield('message')</p>
 
-                <a href="/">{{ __('error.link') }}</a>
+                <a class="link" href="/">{{ __('error.link') }}</a>
             </div>
         </div>
     </body>

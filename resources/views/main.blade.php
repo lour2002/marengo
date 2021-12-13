@@ -18,14 +18,14 @@
         <input name="type-drink" id="vermouth" type="radio" class="visually-hidden" checked>
         <input name="type-drink" id="sparkling" type="radio" class="visually-hidden" >
 
-        <header class="main-header">
+        <header class="main-header select-none">
             {{-- Desktop --}}
-            <nav class="bg-white dark:bg-blue">
+            <nav class="bg-white">
                 <div>
                     <div>
-                        <a href="#products" class="font-bold text-blue dark:text-white link">{{ __('Продукція') }}</a>
-                        <a href="#coctails" class="font-bold text-blue dark:text-white link">{{ __('Коктейлі') }}</a>
-                        <a href="#history" class="font-bold text-blue dark:text-white link">{{ __('Історія') }}</a>
+                        <a href="#products" class="font-bold text-blue link">{{ __('Продукція') }}</a>
+                        <a href="#coctails" class="font-bold text-blue link">{{ __('Коктейлі') }}</a>
+                        <a href="#history" class="font-bold text-blue link">{{ __('Історія') }}</a>
                     </div>
                     <a href="#top"><img src="/images/logo.png" width="204" height="72" alt="Marengo"></a>
                     <x-switch-drink />
@@ -88,6 +88,9 @@
 
                             {{-- Buttons --}}
 
+                            <button class="nav-arrow --circle --backward rotate-180" type="button"></button>
+                            <button class="nav-arrow --circle --forward" type="button"></button>
+
                             {{-- Tablet / Phone --}}
     {{--                        <picture>--}}
     {{--                            --}}{{-- TODO: entities [img] --}}
@@ -119,7 +122,7 @@
 
 
                             {{-- SMALL --}}
-                            <img src="/images/mojito_slide_small.png" alt="Marengo Mojito"width="500" height="904">
+                            <img src="/images/mojito_slide_small.png" alt="Marengo Mojito" width="500" height="904">
     {{--                        <picture>--}}
     {{--                            --}}{{-- TODO: entities [img] --}}
     {{--                            <source srcset="" media="" sizes="">--}}
@@ -159,7 +162,7 @@
             </div>
             <section id="products">
                 <h2 class="visually-hidden">{{ __('Продукція') }}</h2>
-                <button type="button" disabled><</button>
+                <button type="button" class="nav-arrow --backward rotate-180 image-background" disabled></button>
                 <ul>
                     <li>
                         <figure>
@@ -170,7 +173,7 @@
                         </figure>
                     </li>
                 </ul>
-                <button type="button">></button>
+                <button type="button" class="nav-arrow --forward image-background"></button>
             </section>
             <section id="coctails">
                 <h2 class="visually-hidden">{{ __('Коктейлі') }}</h2>
@@ -179,7 +182,7 @@
 {{--                    <option value="all">{{ __('Усі коктейлі') }}</option>--}}
 {{--                    <option value="marengo-mojito">Marengo Mojito</option>--}}
 {{--                </select>--}}
-                <button type="button" disabled><</button>
+                <button type="button" class="nav-arrow --backward rotate-180 image-background" disabled></button>
                 <ul>
                     <li>
                         {{-- TODO: entities [img] --}}
@@ -263,7 +266,7 @@
                         </article>
                     </li>
                 </ul>
-                <button type="button">></button>
+                <button type="button" class="nav-arrow --forward image-background"></button>
             </section>
 
             {{-- TODO: entities [img] --}}
@@ -294,8 +297,8 @@
             <p class="uppercase">Ви повинні відповідати юридичному <br> віку, щоб зайти на даний сайт</p>
 
             <p class="font-semibold ">{{ __('Вам уже виповнилося 18 років?') }}</p>
-            <button type="button" class="button text-red">{{ __('Ні') }}</button>
-            <button type="button" class="button text-white bg-blue">{{ __('Так') }}</button>
+            <button type="button" class="button text-red border-2 border-solid border-red">{{ __('Ні') }}</button>
+            <button type="button" class="button text-white bg-blue border-2 border-solid border-blue">{{ __('Так') }}</button>
             {{-- TODO: localisation --}}
             <p class="font-semibold ">{{ __('Виберіть мову сайту') }}</p>
 {{-- TODO: uncommented for step 2 --}}
@@ -308,7 +311,7 @@
             {{-- TODO: entities [text] --}}
             <p>Цей сайт призначений для особистого використання особами, яким на законних підставах дозволено купувати та вживати алкогольні напої в Україні.</p>
             {{-- TODO: entities [text] --}}
-            <p>Входячи на цей сайт, ви погоджуєтесь з нашими <a  class="font-semibold text-blue" href="">умовами використання</a> та <a class="font-semibold text-blue" href="#">політикою конфіденційності</a>.</p>
+            <p>Входячи на цей сайт, ви погоджуєтесь з нашими <a  class="font-semibold" href="">умовами використання</a> та <a class="font-semibold" href="#">політикою конфіденційності</a>.</p>
             {{-- TODO: entities [text] --}}
             <p>Насолоджуйтесь відповідально.</p>
             <p>© {{ now()->year }} MARENGO </p>

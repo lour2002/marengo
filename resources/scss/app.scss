@@ -1,0 +1,25 @@
+@import "../css/base.css";
+
+.nav-arrow {
+  @apply block border-none bg-white/0 bg-no-repeat;
+  background-image: url("/images/icons/nav-arrow-blue.svg");
+  width: 21px;
+  height: 65px;
+
+  &.--circle {
+    background-image: url("/images/icons/nav-arrow-white.svg");
+    width: calc(477px / 2);
+    height: 477px;
+    @apply bg-blue rounded-r-full;
+    background-position: 70% center;
+  }
+}
+
+.close {
+
+}
+
+input#sparkling:checked ~ .main-header [for='sparkling'],
+input#vermouth:checked ~ .main-header [for='vermouth']{
+  @apply bg-red border-red text-white pointer-events-none cursor-default;
+}

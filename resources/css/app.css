@@ -1,36 +1,31 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "base.css";
 
-html, body {
-  @apply font-sans;
+.nav-arrow {
+  @apply block border-none bg-white/0 disabled:invisible;
+  background-image: url("/images/nav-arrow.svg");
+  width: 21px;
+  height: 65px;
 }
 
-/* helpers */
-.visually-hidden {
-  position: absolute;
-  clip: rect(0 0 0 0);
-  width: 1px;
-  height: 1px;
-  margin: -1px;
+.--forward {
+
+}
+.--backward {
+  @apply rotate-180;
 }
 
-[hidden] {
-  display: none;
+.--circle {
+  width: 477px;
+  height: 477px;
 }
 
-.image-background {
-  @apply bg-center bg-no-repeat bg-cover;
+
+.close {
+
 }
 
-.link {
-  @apply no-underline hover:underline;
+input#sparkling:checked ~ .main-header [for='sparkling'],
+input#vermouth:checked ~ .main-header [for='vermouth']{
+  @apply bg-red border-red text-white pointer-events-none cursor-default;
 }
 
-input#sparkling:checked ~ .main-header [for='sparkling'] {
-  @apply bg-red text-white active:bg-white;
-}
-
-input#vermouth:checked ~ .main-header [for='vermouth'] {
-  @apply bg-red text-white active:bg-white;
-}

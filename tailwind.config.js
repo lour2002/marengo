@@ -4,11 +4,9 @@ module.exports = {
     './resources/**/*.js',
   ],
   corePlugins: {
-    preflight: false,
     boxShadow: false,
     //fontFamily: false,
   },
-  darkMode: 'class',
   theme: {
     extend: {
       backdropBlur: {
@@ -28,6 +26,12 @@ module.exports = {
     },
     fontFamily: {
       'sans': ['Montserrat', 'Arial', 'sans-serif']
+    },
+    fontSize: {
+      sm: ['14px', '14px'],
+      base: ['16px', '20px'],
+      md: ['20px', '28px'],
+      lg: ['24px', '32px'],
     },
     fontWeight: {
       normal: 400,

@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  h1 {
+    @apply font-bold;
+  }
+
+  h2 {
+    @apply font-bold;
+  }
+
+  h3 {
+    @apply font-bold;
+  }
+
+  p {
+    @apply mb-4;
+    color: inherit;
+  }
+
+  a {
+    @apply underline;
+    color: inherit;
+  }
+}
+
+html, body {
+  @apply text-base;
+}
+
+/* helpers */
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
+.image-background {
+  @apply bg-center bg-no-repeat bg-cover;
+}
+
+.link {
+  @apply no-underline hover:underline;
+}
