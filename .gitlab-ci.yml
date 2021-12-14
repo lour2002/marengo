@@ -78,5 +78,5 @@ deploy:
     # comment this out if you don't have a frontend test
     - npm test
   only:
-    - master
+    - main
 
