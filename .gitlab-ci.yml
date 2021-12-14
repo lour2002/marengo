@@ -38,9 +38,6 @@ before_script:
   # Install Composer and project dependencies.
   - curl -sS https://getcomposer.org/installer | php
   - php composer.phar install
-  # Install Node dependencies.
-  # comment this out if you don't have a node dependency
-  - npm install
   # Copy over testing configuration.
   # Don't forget to set the database config in .env.testing correctly
   # DB_HOST=mysql
