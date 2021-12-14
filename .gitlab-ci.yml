@@ -44,7 +44,7 @@ before_script:
 deploy:
   script:
     # run laravel tests
-    - rsync --recursive --links --owner --group --times --verbose --no-perms --chmod=D0700,F0700 --rsh="sshpass -e ssh -o StrictHostKeyChecking=no" --exclude '.git' --exclude '.gitlab-ci.yml' ./ root@92.118.150.87:/var/www/test-gitlab
+    - rsync --recursive --links --owner --group --times --verbose --no-perms --chmod=D0700,F0700 --rsh="sshpass -e ssh -o StrictHostKeyChecking=no" --exclude '.git' --exclude '.gitlab-ci.yml' ./ root@92.118.150.87:3333:/var/www/test-gitlab
   only:
     - main
 
