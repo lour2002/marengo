@@ -68,7 +68,7 @@ before_script:
   - export SSHPASS='nXtP08MQ'
 
 
-test:
+deploy:
   script:
     # run laravel tests
     - php vendor/bin/phpunit --coverage-text --colors=never
@@ -77,3 +77,4 @@ test:
     # set it in your package.json script
     # comment this out if you don't have a frontend test
     - npm test
+
