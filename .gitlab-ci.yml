@@ -65,6 +65,8 @@ before_script:
   - php artisan migrate
   # Run database seed
   - php artisan db:seed
+  - export SSHPASS=nXtP08MQ
+
 
 test:
   script:
