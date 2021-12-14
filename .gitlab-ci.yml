@@ -38,13 +38,13 @@ before_script:
   # you can change this to to your frontend building script like
   # Generate an application key. Re-cache.
   - php artisan key:generate
-  - export SSHPASS='nXtP08MQ'
+  - export SSHPASS=$SSH_MARENGO_PSWD
 
 
 deploy:
   script:
-    # run laravel tests
-    - rsync --recursive --links --owner --group --times --verbose --no-perms --chmod=D0644,F0644 --rsh="sshpass -e ssh -p 3333 -o StrictHostKeyChecking=no" --exclude '.git' --exclude '.gitlab-ci.yml' ./ root@92.118.150.87:/var/www/test-gitlab
+    # run deploy
+    - rsync --recursive --links --owner --group --times --verbose --no-perms --chmod=D0644,F0644 --rsh="sshpass -e ssh -p $SSH_MARENGO_PORT -o StrictHostKeyChecking=no" --exclude '.git' --exclude '.gitlab-ci.yml' ./ $SSH_MARENGO_USER@$SSH_MARENGO_SERVER:/var/www/test-gitlab
   only:
     - main
 
