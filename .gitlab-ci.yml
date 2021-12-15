@@ -44,7 +44,7 @@ before_script:
 deploy:
   script:
     # run deploy
-    - rsync --recursive --links --owner --group --times --verbose --no-perms --chmod=D0644,F0644 --rsh="sshpass -e ssh -p $SSH_MARENGO_PORT -o StrictHostKeyChecking=no" --exclude '.git' --exclude '.gitlab-ci.yml' ./ $SSH_MARENGO_USER@$SSH_MARENGO_SERVER:/var/www/test-gitlab
+    - rsync --recursive --links --owner --group --times --verbose --no-perms --chmod=D0644,F0644 --rsh="sshpass -e ssh -p $SSH_MARENGO_PORT -o StrictHostKeyChecking=no" --exclude '.git' --exclude '.gitlab-ci.yml' ./ $SSH_MARENGO_USER@$SSH_MARENGO_SERVER:/home/jg386444/new.marengo.ua
   only:
     - main
 
