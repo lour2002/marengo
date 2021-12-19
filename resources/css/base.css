@@ -26,10 +26,6 @@
   }
 }
 
-html, body {
-  @apply text-base;
-}
-
 /* helpers */
 .visually-hidden {
   position: absolute;

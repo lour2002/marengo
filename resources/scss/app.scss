@@ -1,25 +1,49 @@
 @import "../css/base.css";
 
 .nav-arrow {
-  @apply block border-none bg-white/0 bg-no-repeat;
+  @apply block border-none bg-white/0 bg-no-repeat ;
   background-image: url("/images/icons/nav-arrow-blue.svg");
   width: 21px;
   height: 65px;
 
   &.--circle {
+    @apply bg-blue rounded-r-full disabled:bg-none;
     background-image: url("/images/icons/nav-arrow-white.svg");
     width: calc(477px / 2);
     height: 477px;
-    @apply bg-blue rounded-r-full;
     background-position: 70% center;
   }
 }
 
-.close {
+.page {
+  @apply h-full;
+}
 
+.page-body {
+  @apply min-h-full text-base grid content-start;
+  grid-template-rows: min-content 1fr min-content;
 }
 
 input#sparkling:checked ~ .main-header [for='sparkling'],
 input#vermouth:checked ~ .main-header [for='vermouth']{
   @apply bg-red border-red text-white pointer-events-none cursor-default;
+}
+
+.drink-slide {
+  &__title {
+    font-size: 36px;
+    line-height: 44px;
+  }
+
+  &__link {
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+
+.recipe {
+  &__title {
+    font-size: 34px;
+    line-height: 41px;
+  }
 }

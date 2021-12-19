@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html class="page" lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -14,21 +14,21 @@
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
     </head>
-    <body>
+    <body class="page-body">
         <input name="type-drink" id="vermouth" type="radio" class="visually-hidden" checked>
         <input name="type-drink" id="sparkling" type="radio" class="visually-hidden" >
 
         <header class="main-header select-none">
             {{-- Desktop --}}
             <nav class="bg-white">
-                <div>
-                    <div>
-                        <a href="#products" class="font-bold text-blue link">{{ __('Продукція') }}</a>
-                        <a href="#coctails" class="font-bold text-blue link">{{ __('Коктейлі') }}</a>
-                        <a href="#history" class="font-bold text-blue link">{{ __('Історія') }}</a>
+                <div class="grid">
+                    <a href="#top" class="order-2"><img src="/images/logo.png" width="204" height="72" alt="Marengo"></a>
+                    <div class="order-1">
+                        <a href="#products" class="font-bold text-md text-blue link">{{ __('Продукція') }}</a>
+                        <a href="#coctails" class="font-bold text-md text-blue link">{{ __('Коктейлі') }}</a>
+                        <a href="#history" class="font-bold text-md text-blue link">{{ __('Історія') }}</a>
                     </div>
-                    <a href="#top"><img src="/images/logo.png" width="204" height="72" alt="Marengo"></a>
-                    <x-switch-drink />
+                    <x-switch-drink class="order-3" />
                 </div>
 {{-- TODO: uncommited for step 2 --}}
 {{--                <div>--}}
@@ -41,8 +41,8 @@
 
             </nav>
             {{-- Mobile --}}
-            <button type="button">Меню</button>
-            <div>
+            <button class="hidden" type="button">Меню</button>
+            <div class="hidden">
                 <x-switch-drink />
                 <div>
                     <ul>
@@ -88,8 +88,9 @@
 
                             {{-- Buttons --}}
 
-                            <button class="nav-arrow --circle --backward rotate-180" type="button"></button>
+                            <button class="nav-arrow --circle --backward rotate-180" type="button" disabled></button>
                             <button class="nav-arrow --circle --forward" type="button"></button>
+
 
                             {{-- Tablet / Phone --}}
     {{--                        <picture>--}}
@@ -135,7 +136,7 @@
     {{--                        </picture>--}}
                             <div>
                                 {{-- TODO: entities [string] --}}
-                                <h3 class="font-normal text-white bg-blue/88">Marengo Mojito</h3>
+                                <h3 class="drink-slide__title font-normal text-white bg-blue/88">Marengo Mojito</h3>
                                 {{-- TODO: entities [text] --}}
                                 <div class="text-blue bg-white/88">
                                     <p>Відчуйте справжній смак Куби у вашому келиху!</p>
@@ -149,8 +150,8 @@
                                     <p>Місткість: 0,5 л; 1,0 л</p>
                                 </div>
                                 {{-- TODO: entities [link] --}}
-                                <a href="#" class="no-underline text-white bg-red">{{ __('Купити') }}</a>
-                                <a href="#" class="no-underline text-white bg-blue">{{ __('Коктейлі') }}</a>
+                                <a href="#" class="drink-slide__link no-underline text-white bg-red">{{ __('Купити') }}</a>
+                                <a href="#" class="drink-slide__link no-underline text-white bg-blue">{{ __('Коктейлі') }}</a>
                             </div>
                         </li>
                     </ul>
@@ -162,7 +163,7 @@
             </div>
             <section id="products">
                 <h2 class="visually-hidden">{{ __('Продукція') }}</h2>
-                <button type="button" class="nav-arrow --backward rotate-180 image-background" disabled></button>
+                <x-slider.nav direction="backward" disabled />
                 <ul>
                     <li>
                         <figure>
@@ -173,7 +174,8 @@
                         </figure>
                     </li>
                 </ul>
-                <button type="button" class="nav-arrow --forward image-background"></button>
+                <x-slider.nav direction="forward" />
+
             </section>
             <section id="coctails">
                 <h2 class="visually-hidden">{{ __('Коктейлі') }}</h2>
@@ -182,7 +184,7 @@
 {{--                    <option value="all">{{ __('Усі коктейлі') }}</option>--}}
 {{--                    <option value="marengo-mojito">Marengo Mojito</option>--}}
 {{--                </select>--}}
-                <button type="button" class="nav-arrow --backward rotate-180 image-background" disabled></button>
+                <x-slider.nav direction="backward" disabled />
                 <ul>
                     <li>
                         {{-- TODO: entities [img] --}}
@@ -193,7 +195,7 @@
                             <div class="text-blue bg-white/88">
                                 <button type="button">x</button>
                                 {{-- TODO: entities [string] --}}
-                                <h3 >Сицилия Sicilia</h3>
+                                <h3 class="recipe__title text-center">Сицилия Sicilia</h3>
                                 {{-- TODO: entities [text] --}}
                                 <p>Сонячна Сицилія славиться своїми садами сицилійських апельсинів. Саме вони надихнули мастера Marengo (NAME) на створення вермута Di Fiore.</p>
                                 <p>Коктейль на основі Di Fiore поєднує в собі шарм Середземного моря Італії, перчинку вулкана Етна і пряний цитрусовий смак.</p>
@@ -228,7 +230,7 @@
                             <div class="text-white bg-blue/88">
                                 <button type="button">x</button>
                                 {{-- TODO: entities [string] --}}
-                                <h3>Сироп гвоздики та перцю</h3>
+                                <h3 class="recipe__title text-center">Сироп гвоздики та перцю</h3>
                                 {{-- TODO: entities [text] --}}
                                 <p>Нам понадобится, что бы приготовить этот ароматный и пряный сироп на 1 л, это всего:</p>
 
@@ -266,7 +268,7 @@
                         </article>
                     </li>
                 </ul>
-                <button type="button" class="nav-arrow --forward image-background"></button>
+                <x-slider.nav direction="forward" />
             </section>
 
             {{-- TODO: entities [img] --}}
@@ -274,7 +276,7 @@
                 <div>
                     {{-- TODO: entities [string] --}}
                     <h2 class="visually-hidden">Історія MARENGO</h2>
-                    <header class="text-blue">Історія <b>MARENGO</b></header>
+                    <header class="text-blue text-lg">Історія <b>MARENGO</b></header>
                     {{-- TODO: entities [text] --}}
                     <p>История нашего бренда началась в 2001 году, когда была разлита первая бутылка Marengo на винзаводе Коблево. Сама идея создания высококачественного вермута появилась с момента основания завода в 1982 году.  Именно поэтому на символике Marengo выбита эта цифра.</p>
                     <p>Основным ингредиентом нашего вермута является виноград, из которого мы производим вино высочайшего качества для приготовления Marengo. Наши технологи долго экспериментировали с различными сортами европейского винограда и разнообразным сочетанием трав и пряностей, чтобы получить сбалансированный вкус и аромат, которым вы наслаждаетесь. </p>

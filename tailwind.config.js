@@ -30,8 +30,8 @@ module.exports = {
     fontSize: {
       sm: ['14px', '14px'],
       base: ['16px', '20px'],
-      md: ['20px', '28px'],
-      lg: ['24px', '32px'],
+      md: ['18px', '22px'],
+      lg: ['24px', '30px'],
     },
     fontWeight: {
       normal: 400,
