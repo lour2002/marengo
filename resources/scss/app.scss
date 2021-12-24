@@ -1,5 +1,9 @@
 @import "../css/base.css";
 
+@import "main";
+@import "modal";
+@import "page";
+
 .nav-arrow {
   @apply block border-none bg-white/0 bg-no-repeat ;
   background-image: url("/images/icons/nav-arrow-blue.svg");
@@ -15,14 +19,7 @@
   }
 }
 
-.page {
-  @apply h-full;
-}
 
-.page-body {
-  @apply min-h-full text-base grid content-start;
-  grid-template-rows: min-content 1fr min-content;
-}
 
 input#sparkling:checked ~ .main-header [for='sparkling'],
 input#vermouth:checked ~ .main-header [for='vermouth']{

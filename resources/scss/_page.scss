@@ -1,0 +1,8 @@
+.page {
+  @apply h-full;
+
+  &__body {
+    @apply min-h-full text-base grid content-start;
+    grid-template-rows: min-content 1fr min-content;
+  }
+}

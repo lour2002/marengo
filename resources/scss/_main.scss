@@ -1,0 +1,8 @@
+.main {
+  &__header {
+    @apply select-none;
+  }
+
+  &__content {}
+  &__footer {}
+}

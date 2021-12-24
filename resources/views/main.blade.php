@@ -14,11 +14,11 @@
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
     </head>
-    <body class="page-body">
+    <body class="page__body">
         <input name="type-drink" id="vermouth" type="radio" class="visually-hidden" checked>
         <input name="type-drink" id="sparkling" type="radio" class="visually-hidden" >
 
-        <header class="main-header select-none">
+        <header class="main__header">
             {{-- Desktop --}}
             <nav class="bg-white">
                 <div class="grid">
@@ -66,7 +66,7 @@
                 <x-socials />
             </div>
         </header>
-        <main class="main-content">
+        <main class="main__content">
             <h1 class="visually-hidden">Marengo</h1>
             <div id="top">
                 <section>
@@ -284,7 +284,7 @@
                 </div>
             </section>
         </main>
-        <footer class="main-footer">
+        <footer class="main__footer">
             <div>
                 <x-doc-list />
                 <img src="/images/logo.png" width="163" height="58" alt="Marengo">
@@ -292,7 +292,7 @@
             </div>
         </footer>
         {{-- Modal 18+ --}}
-        <section class="backdrop-blur-bg bg-beige text-blue text-center">
+        <section class="modal eighteen-modal">
             <h2 class="visually-hidden"></h2>
             <img src="/images/logo.png" width="284" height="100" alt="Marengo">
             {{-- TODO: entities [text] --}}
