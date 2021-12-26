@@ -1,8 +1,11 @@
 .main {
-  &__header {
-    @apply select-none;
+  &__content {
+    padding-top: 55px;
   }
 
-  &__content {}
-  &__footer {}
+  &__footer {
+    @apply grid items-center h-full;
+    grid-column-gap: 30px;
+    grid-template-columns: 1fr max-content max-content;
+  }
 }

@@ -1,0 +1,36 @@
+.header {
+  $header-logo-width: 204px;
+
+  @apply select-none bg-white fixed w-full z-10;
+  height: 55px;
+
+  &__navigation {
+    @apply grid h-full ml-auto;
+    grid-template-columns: 1fr min-content 1fr;
+  }
+
+  &__logo {
+    width: $header-logo-width;
+    img {
+      @apply absolute;
+      top: 17px;
+    }
+  }
+
+  &__menu {
+    @apply flex items-center justify-around;
+
+    .link {
+      @apply font-bold text-md text-blue px-2;
+    }
+  }
+
+  &__drinks {
+    @apply flex justify-start items-center;
+
+    label {
+      margin: 0 10px;
+      padding: 5px 20px;
+    }
+  }
+}

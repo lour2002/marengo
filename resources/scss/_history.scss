@@ -1,0 +1,12 @@
+.history {
+  @apply min-h-screen;
+  &__info {
+    transform: translateY(50%);
+    max-width: 860px;
+  }
+
+  &__title {
+    @apply text-blue text-lg;
+    margin-bottom: 37px;
+  }
+}

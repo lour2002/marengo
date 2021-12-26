@@ -5,6 +5,7 @@ module.exports = {
   ],
   corePlugins: {
     boxShadow: false,
+    container: false,
     //fontFamily: false,
   },
   theme: {
@@ -14,7 +15,7 @@ module.exports = {
       },
       opacity: {
         '88':'.88',
-      }
+      },
     },
     colors: {
       blue: '#182857',

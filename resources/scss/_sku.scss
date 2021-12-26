@@ -1,0 +1,9 @@
+.sku-list {
+  @apply grid py-32;
+  grid-template-columns: min-content 1fr min-content;
+}
+
+.sku-slide {
+  @apply grid grid-cols-4;
+  grid-gap: 44px;
+}

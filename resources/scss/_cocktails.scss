@@ -1,0 +1,9 @@
+.cocktails {
+  @apply grid py-32;
+  grid-template-columns: min-content 1fr min-content;
+
+  &__slide {
+    @apply grid grid-cols-5;
+    grid-column-gap: 33px;
+  }
+}

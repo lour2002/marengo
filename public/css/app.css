@@ -380,7 +380,7 @@ Ensure the default browser behavior of the `hidden` attribute.
   display: none;
 }
 
-.rotate-180 {
+.translate-x-2\/4, .translate-y-2\/4, .rotate-180 {
   --tw-translate-x: 0;
   --tw-translate-y: 0;
   --tw-rotate: 0;
@@ -393,19 +393,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .border-2, .border-t, .border-r {
   border-color: currentColor;
-}
-
-.backdrop-blur-bg {
-  --tw-backdrop-blur: var(--tw-empty,/*!*/ /*!*/);
-  --tw-backdrop-brightness: var(--tw-empty,/*!*/ /*!*/);
-  --tw-backdrop-contrast: var(--tw-empty,/*!*/ /*!*/);
-  --tw-backdrop-grayscale: var(--tw-empty,/*!*/ /*!*/);
-  --tw-backdrop-hue-rotate: var(--tw-empty,/*!*/ /*!*/);
-  --tw-backdrop-invert: var(--tw-empty,/*!*/ /*!*/);
-  --tw-backdrop-opacity: var(--tw-empty,/*!*/ /*!*/);
-  --tw-backdrop-saturate: var(--tw-empty,/*!*/ /*!*/);
-  --tw-backdrop-sepia: var(--tw-empty,/*!*/ /*!*/);
-  --tw-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
 }
   h1 {
   font-weight: 700;
@@ -437,6 +424,15 @@ Ensure the default browser behavior of the `hidden` attribute.
 .relative {
   position: relative;
 }
+.right-2\/4 {
+  right: 50%;
+}
+.right-1\/4 {
+  right: 25%;
+}
+.bottom-2\/4 {
+  bottom: 50%;
+}
 .top-0 {
   top: 0px;
 }
@@ -462,6 +458,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
+}
+.mx-3 {
+  margin-left: 0.75rem;
+  margin-right: 0.75rem;
 }
 .mb-8 {
   margin-bottom: 2rem;
@@ -505,6 +505,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .hidden {
   display: none;
 }
+.h-full {
+  height: 100%;
+}
 .h-1 {
   height: 0.25rem;
 }
@@ -519,6 +522,12 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .min-h-screen {
   min-height: 100vh;
+}
+.w-9\/12 {
+  width: 75%;
+}
+.w-3\/12 {
+  width: 25%;
 }
 .w-16 {
   width: 4rem;
@@ -544,6 +553,14 @@ Ensure the default browser behavior of the `hidden` attribute.
 .max-w-6xl {
   max-width: 72rem;
 }
+.translate-x-2\/4 {
+  --tw-translate-x: 50%;
+  transform: var(--tw-transform);
+}
+.translate-y-2\/4 {
+  --tw-translate-y: 50%;
+  transform: var(--tw-transform);
+}
 .rotate-180 {
   --tw-rotate: 180deg;
   transform: var(--tw-transform);
@@ -551,20 +568,20 @@ Ensure the default browser behavior of the `hidden` attribute.
 .cursor-pointer {
   cursor: pointer;
 }
-.select-none {
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-}
 .grid-cols-1 {
   grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+.grid-cols-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 .items-center {
   align-items: center;
 }
 .justify-center {
   justify-content: center;
+}
+.justify-around {
+  justify-content: space-around;
 }
 .overflow-hidden {
   overflow: hidden;
@@ -592,16 +609,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-border-opacity: 1;
   border-color: rgb(24 40 87 / var(--tw-border-opacity));
 }
-.bg-white {
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-}
-.bg-blue\/88 {
-  background-color: rgb(24 40 87 / .88);
-}
-.bg-white\/88 {
-  background-color: rgb(255 255 255 / .88);
-}
 .bg-red {
   --tw-bg-opacity: 1;
   background-color: rgb(208 32 48 / var(--tw-bg-opacity));
@@ -610,9 +617,15 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-bg-opacity: 1;
   background-color: rgb(24 40 87 / var(--tw-bg-opacity));
 }
-.bg-beige {
+.bg-white\/88 {
+  background-color: rgb(255 255 255 / .88);
+}
+.bg-blue\/88 {
+  background-color: rgb(24 40 87 / .88);
+}
+.bg-white {
   --tw-bg-opacity: 1;
-  background-color: rgb(244 236 227 / var(--tw-bg-opacity));
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 .bg-cover {
   background-size: cover;
@@ -648,13 +661,13 @@ Ensure the default browser behavior of the `hidden` attribute.
 .font-sans {
   font-family: Montserrat, Arial, sans-serif;
 }
-.text-md {
-  font-size: 18px;
-  line-height: 22px;
-}
 .text-lg {
   font-size: 24px;
   line-height: 30px;
+}
+.text-md {
+  font-size: 18px;
+  line-height: 22px;
 }
 .text-sm {
   font-size: 14px;
@@ -662,9 +675,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .font-bold {
   font-weight: 700;
-}
-.font-normal {
-  font-weight: 400;
 }
 .font-semibold {
   font-weight: 600;
@@ -703,20 +713,12 @@ Ensure the default browser behavior of the `hidden` attribute.
 .underline {
   text-decoration: underline;
 }
-.no-underline {
-  text-decoration: none;
-}
 .antialiased {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 .outline {
   outline-style: solid;
-}
-.backdrop-blur-bg {
-  --tw-backdrop-blur: blur(35px);
-  -webkit-backdrop-filter: var(--tw-backdrop-filter);
-          backdrop-filter: var(--tw-backdrop-filter);
 }
 
 /* helpers */
@@ -813,6 +815,207 @@ Ensure the default browser behavior of the `hidden` attribute.
   }
 }
 
+.drink-slide__picture{
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+.drink-slide__bottle{
+  position: absolute;
+  z-index: 10;
+  min-height: 100vh;
+  height: 100%;
+  top: -55px;
+}
+.drink-slide__title{
+  display: inline-block;
+  background-color: rgb(24 40 87 / .88);
+  font-weight: 400;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+  font-size: 36px;
+  line-height: 44px;
+  padding: 18px 20px;
+}
+.drink-slide__desc{
+  background-color: rgb(255 255 255 / .88);
+  --tw-text-opacity: 1;
+  color: rgb(24 40 87 / var(--tw-text-opacity));
+  padding: 20px;
+}
+.drink-slide__link{
+  display: inline-block;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+  text-decoration: none;
+  font-size: 20px;
+  line-height: 24px;
+  margin: 20px 20px 0 0;
+  padding: 11px 20px;
+}
+
+.header{
+  position: fixed;
+  z-index: 10;
+  width: 100%;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  height: 55px;
+}
+.header__navigation{
+  margin-left: auto;
+  display: grid;
+  height: 100%;
+  grid-template-columns: 1fr -webkit-min-content 1fr;
+  grid-template-columns: 1fr min-content 1fr;
+}
+.header__logo {
+  width: 204px;
+}
+.header__logo img{
+  position: absolute;
+  top: 17px;
+}
+.header__menu{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.header__menu .link{
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: 700;
+  --tw-text-opacity: 1;
+  color: rgb(24 40 87 / var(--tw-text-opacity));
+}
+.header__drinks{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.header__drinks label {
+  margin: 0 10px;
+  padding: 5px 20px;
+}
+
+.list-drinks__part-one{
+  position: relative;
+  min-height: calc(100vh - 55px);
+}
+.list-drinks__part-two {
+  min-height: calc(100vh - 55px);
+}
+.list-drinks__info-wrap{
+  position: absolute;
+  transform: translateX(calc(50% - 100px));
+  padding: 0 10px;
+  max-width: 780px;
+  width: calc(100% - 200px);
+  bottom: 40px;
+}
+.list-drinks__navigation{
+  position: absolute;
+  display: flex;
+}
+
+.main__content {
+  padding-top: 55px;
+}
+.main__footer{
+  display: grid;
+  height: 100%;
+  align-items: center;
+  grid-column-gap: 30px;
+  grid-template-columns: 1fr -webkit-max-content -webkit-max-content;
+  grid-template-columns: 1fr max-content max-content;
+}
+
+.eighteen-modal{
+  --tw-bg-opacity: 1;
+  background-color: rgb(244 236 227 / var(--tw-bg-opacity));
+  text-align: center;
+  --tw-text-opacity: 1;
+  color: rgb(24 40 87 / var(--tw-text-opacity));
+}
+
+.page{
+  height: 100%;
+}
+.page__body{
+  display: grid;
+  min-height: 100%;
+  align-content: flex-start;
+  --tw-bg-opacity: 1;
+  background-color: rgb(244 236 227 / var(--tw-bg-opacity));
+  font-size: 16px;
+  line-height: 20px;
+  grid-template-rows: -webkit-min-content 1fr -webkit-min-content;
+  grid-template-rows: min-content 1fr min-content;
+}
+.page__footer{
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  height: 90px;
+}
+
+/** Second screen */
+.sku-list{
+  display: grid;
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+  grid-template-columns: -webkit-min-content 1fr -webkit-min-content;
+  grid-template-columns: min-content 1fr min-content;
+}
+
+.sku-slide{
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-gap: 44px;
+}
+
+/** Third screen */
+.cocktails{
+  display: grid;
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+  grid-template-columns: -webkit-min-content 1fr -webkit-min-content;
+  grid-template-columns: min-content 1fr min-content;
+}
+.cocktails__slide{
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-column-gap: 33px;
+}
+
+/** Fourth screen */
+.history{
+  min-height: 100vh;
+}
+.history__info {
+  transform: translateY(50%);
+  max-width: 860px;
+}
+.history__title{
+  font-size: 24px;
+  line-height: 30px;
+  --tw-text-opacity: 1;
+  color: rgb(24 40 87 / var(--tw-text-opacity));
+  margin-bottom: 37px;
+}
+
 .nav-arrow{
   display: block;
   border-style: none;
@@ -833,26 +1036,12 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .nav-arrow.--circle {
   background-image: url("/images/icons/nav-arrow-white.svg");
-  width: 238.5px;
-  height: 477px;
-  background-position: 70% center;
+  width: calc(400px / 2);
+  height: 400px;
+  background-position: 80% center;
 }
 
-.page{
-  height: 100%;
-}
-
-.page-body{
-  display: grid;
-  min-height: 100%;
-  align-content: flex-start;
-  font-size: 16px;
-  line-height: 20px;
-  grid-template-rows: -webkit-min-content 1fr -webkit-min-content;
-  grid-template-rows: min-content 1fr min-content;
-}
-
-input#sparkling:checked ~ .main-header [for=sparkling], input#vermouth:checked ~ .main-header [for=vermouth]{
+input#sparkling:checked ~ .main__header [for=sparkling], input#vermouth:checked ~ .main__header [for=vermouth]{
   pointer-events: none;
   cursor: default;
   --tw-border-opacity: 1;
@@ -863,13 +1052,12 @@ input#sparkling:checked ~ .main-header [for=sparkling], input#vermouth:checked ~
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
-.drink-slide__title {
-  font-size: 36px;
-  line-height: 44px;
-}
-.drink-slide__link {
-  font-size: 20px;
-  line-height: 24px;
+.container{
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1280px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .recipe__title {

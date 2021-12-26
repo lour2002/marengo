@@ -1,4 +1,4 @@
-<ul>
+<ul class="flex justify-around">
     {{-- TODO: entities [file, title] --}}
     <li><a href="/" class="link text-blue font-semibold" title="Положення та умови">Положення та умови</a></li>
     {{-- TODO: entities [file, title] --}}
