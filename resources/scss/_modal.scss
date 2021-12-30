@@ -1,7 +1,13 @@
 .modal {
+  @apply z-10;
+  position: fixed;
+  display: none;
 
+  &.--show {
+    display: block;
+  }
 }
 
 .eighteen-modal {
-  @apply bg-beige text-blue text-center;
+  @apply bg-beige text-blue text-center w-screen h-screen;
 }

@@ -366,7 +366,7 @@
             </div>
         </footer>
         {{-- Modal 18+ --}}
-        <section class="modal eighteen-modal">
+        <section class="modal --show eighteen-modal">
             <h2 class="visually-hidden"></h2>
             <img src="/images/logo.png" width="284" height="100" alt="Marengo">
             {{-- TODO: entities [text] --}}

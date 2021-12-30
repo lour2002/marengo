@@ -58,6 +58,7 @@
                 font-size: 24px;
                 line-height: 29px;
                 color: #182857;
+                margin-bottom: 40px;
             }
 
             .link {
@@ -71,6 +72,7 @@
                 color: #FFFFFF;
                 background-color: #182857;
                 text-decoration: none;
+                padding: 15px 30px;
             }
         </style>
     </head>
