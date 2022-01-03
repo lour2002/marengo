@@ -6,4 +6,8 @@
     @apply grid grid-cols-5;
     grid-column-gap: 33px;
   }
+
+  &__item-desc {
+    @apply absolute z-10 left-0 top-0 w-full h-full;
+  }
 }

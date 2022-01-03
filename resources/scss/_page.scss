@@ -8,6 +8,10 @@
   &__body {
     @apply min-h-full text-base grid content-start bg-beige;
     grid-template-rows: min-content 1fr min-content;
+
+    &.--active-modal {
+      @apply overflow-hidden;
+    }
   }
 
   &__footer {

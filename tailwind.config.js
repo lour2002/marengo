@@ -14,7 +14,8 @@ module.exports = {
         bg: '35px',
       },
       opacity: {
-        '88':'.88',
+        '88': '.88',
+        '85': '.85'
       },
     },
     colors: {

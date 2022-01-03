@@ -1,7 +1,7 @@
 .header {
   $header-logo-width: 204px;
 
-  @apply select-none bg-white fixed w-full z-10;
+  @apply select-none bg-white fixed w-full z-30;
   height: 55px;
 
   &__navigation {

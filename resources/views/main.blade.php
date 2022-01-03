@@ -14,6 +14,7 @@
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
     </head>
+    {{-- TODO: to add '--active-modal' class --}}
     <body class="page__body">
         <input name="type-drink" id="vermouth" type="radio" class="visually-hidden" checked>
         <input name="type-drink" id="sparkling" type="radio" class="visually-hidden" >
@@ -239,10 +240,88 @@
 {{--                    <option value="marengo-mojito">Marengo Mojito</option>--}}
 {{--                </select>--}}
                 <x-slider.nav direction="backward" disabled />
-                <ul class="cocktails__slide">
-                    <li>
+                <ul class="cocktails__slide relative">
+                    <li class="cocktail">
                         {{-- TODO: entities [img] --}}
                         <img src="/images/coctail.png" alt="Сицилия Sicilia" width="227" height="526">
+                        <article class="cocktail__desc cocktails__item-desc">
+                            {{-- TODO: entities [img] --}}
+                            <img class="cocktail__picture" src="/images/coctail.png" alt="Сицилия Sicilia" width="227" height="526">
+                            <div class="cocktail__info">
+                                <button class="absolute" type="button">x</button>
+                                {{-- TODO: entities [string] --}}
+                                <h3 class="recipe__title text-center">Сицилия <br> Sicilia</h3>
+                                {{-- TODO: entities [text] --}}
+                                <p class="text-justify">Сонячна Сицилія славиться своїми садами сицилійських апельсинів. Саме вони надихнули мастера Marengo (NAME) на створення вермута Di Fiore.</p>
+                                <p class="text-justify">Коктейль на основі Di Fiore поєднує в собі шарм Середземного моря Італії, перчинку вулкана Етна і пряний цитрусовий смак.</p>
+
+                                {{-- TODO: entities [recipe] --}}
+                                <table class="mb-3">
+                                    {{-- TODO: entities [ingrifient] --}}
+                                    <tr>
+                                        <td class="font-semibold">80 мл</td>
+                                        <td>Вермут <b class="font-semibold">Marengo Di Fiore</b></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="font-semibold">20 мл</td>
+                                        <td>Кордіал сицилійського апельсина копчений</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="font-semibold">5 г</td>
+                                        <td>
+                                            Сироп гвоздики та перцю
+                                            <button>*</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="font-semibold">30 г</td>
+                                        <td>Грейпфрут палений</td>
+                                    </tr>
+                                </table>
+                                {{-- TODO: entities [text] --}}
+                                <p class="text-justify">Наповніть винний келих доверху кубиками льоду, залийте всі інгредієнти і перемішайте барною ложкою.</p>
+                            </div>
+
+                            {{-- TODO: entities [recipe] --}}
+                            <div class="hidden text-white bg-blue/88">
+                                <button type="button">x</button>
+                                {{-- TODO: entities [string] --}}
+                                <h3 class="recipe__title text-center">Сироп гвоздики та перцю</h3>
+                                {{-- TODO: entities [text] --}}
+                                <p>Нам понадобится, что бы приготовить этот ароматный и пряный сироп на 1 л, это всего:</p>
+
+                                {{-- TODO: entities [recipe] --}}
+                                <table>
+                                    {{-- TODO: entities [ingrifient] --}}
+                                    <tr>
+                                        {{-- TODO: entities [string] --}}
+                                        <td class="font-semibold">20 г</td>
+                                        {{-- TODO: entities [string] --}}
+                                        <td>Гвоздика</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="font-semibold">30 г</td>
+                                        <td>Перемолотый чёрный перц</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="font-semibold">600 г</td>
+                                        <td>Сахар</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="font-semibold">800 г</td>
+                                        <td>Вода фильтрованная</td>
+                                    </tr>
+                                </table>
+                                {{-- TODO: entities [text] --}}
+                                <ul>
+                                    <li>Смешать специи с фильтрованной водой</li>
+                                    <li>Проварить всего 5мин на маленьком огне</li>
+                                    <li>Отфильтровать и добавить Сахар</li>
+                                    <li>Растворить, так же на маленьком огне</li>
+                                    <li>Охладить и наслаждаться этим ингредиентом в коктейле Сицилия</li>
+                                </ul>
+                            </div>
+                        </article>
                     </li>
                     <li>
                         {{-- TODO: entities [img] --}}
@@ -262,83 +341,7 @@
                     </li>
                 </ul>
 
-                <article class="hidden">
-                    {{-- TODO: entities [img] --}}
-                    <img src="/images/coctail.png" alt="Сицилия Sicilia" width="227" height="526">
-                    <div class="text-blue bg-white/88">
-                        <button type="button">x</button>
-                        {{-- TODO: entities [string] --}}
-                        <h3 class="recipe__title text-center">Сицилия Sicilia</h3>
-                        {{-- TODO: entities [text] --}}
-                        <p>Сонячна Сицилія славиться своїми садами сицилійських апельсинів. Саме вони надихнули мастера Marengo (NAME) на створення вермута Di Fiore.</p>
-                        <p>Коктейль на основі Di Fiore поєднує в собі шарм Середземного моря Італії, перчинку вулкана Етна і пряний цитрусовий смак.</p>
 
-                        {{-- TODO: entities [recipe] --}}
-                        <table>
-                            {{-- TODO: entities [ingrifient] --}}
-                            <tr>
-                                <td class="font-semibold">80 мл</td>
-                                <td>Вермут <b class="font-semibold">Marengo Di Fiore</b></td>
-                            </tr>
-                            <tr>
-                                <td class="font-semibold">20 мл</td>
-                                <td>Кордіал сицилійського апельсина копчений</td>
-                            </tr>
-                            <tr>
-                                <td class="font-semibold">5 г</td>
-                                <td>
-                                    Сироп гвоздики та перцю
-                                    <button>*</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="font-semibold">30 г</td>
-                                <td>Грейпфрут палений</td>
-                            </tr>
-                        </table>
-                        <p>Наповніть винний келих доверху кубиками льоду, залийте всі інгредієнти і перемішайте барною ложкою.</p>
-                    </div>
-
-                    {{-- TODO: entities [recipe] --}}
-                    <div class="text-white bg-blue/88">
-                        <button type="button">x</button>
-                        {{-- TODO: entities [string] --}}
-                        <h3 class="recipe__title text-center">Сироп гвоздики та перцю</h3>
-                        {{-- TODO: entities [text] --}}
-                        <p>Нам понадобится, что бы приготовить этот ароматный и пряный сироп на 1 л, это всего:</p>
-
-                        {{-- TODO: entities [recipe] --}}
-                        <table>
-                            {{-- TODO: entities [ingrifient] --}}
-                            <tr>
-                                {{-- TODO: entities [string] --}}
-                                <td class="font-semibold">20 г</td>
-                                {{-- TODO: entities [string] --}}
-                                <td>Гвоздика</td>
-                            </tr>
-                            <tr>
-                                <td class="font-semibold">30 г</td>
-                                <td>Перемолотый чёрный перц</td>
-                            </tr>
-                            <tr>
-                                <td class="font-semibold">600 г</td>
-                                <td>Сахар</td>
-                            </tr>
-                            <tr>
-                                <td class="font-semibold">800 г</td>
-                                <td>Вода фильтрованная</td>
-                            </tr>
-                        </table>
-                        {{-- TODO: entities [text] --}}
-                        <ul>
-                            <li>Смешать специи с фильтрованной водой</li>
-                            <li>Проварить всего 5мин на маленьком огне</li>
-                            <li>Отфильтровать и добавить Сахар</li>
-                            <li>Растворить, так же на маленьком огне</li>
-                            <li>Охладить и наслаждаться этим ингредиентом в коктейле Сицилия</li>
-                        </ul>
-                    </div>
-                </article>
 
                 <x-slider.nav direction="forward" />
             </section>
@@ -365,32 +368,37 @@
                 <x-socials />
             </div>
         </footer>
-        {{-- Modal 18+ --}}
-        <section class="modal --show eighteen-modal">
-            <h2 class="visually-hidden"></h2>
-            <img src="/images/logo.png" width="284" height="100" alt="Marengo">
-            {{-- TODO: entities [text] --}}
-            <p class="uppercase">Ви повинні відповідати юридичному <br> віку, щоб зайти на даний сайт</p>
-
-            <p class="font-semibold ">{{ __('Вам уже виповнилося 18 років?') }}</p>
-            <button type="button" class="button text-red border-2 border-solid border-red">{{ __('Ні') }}</button>
-            <button type="button" class="button text-white bg-blue border-2 border-solid border-blue">{{ __('Так') }}</button>
-            {{-- TODO: localisation --}}
-            <p class="font-semibold ">{{ __('Виберіть мову сайту') }}</p>
-{{-- TODO: uncommented for step 2 --}}
-{{--            <select>--}}
-{{--                <option value="uk">Українська</option>--}}
-{{--                <option value="ru">Русский</option>--}}
-{{--                <option value="en">English</option>--}}
-{{--            </select>--}}
-            <br>
-            {{-- TODO: entities [text] --}}
-            <p>Цей сайт призначений для особистого використання особами, яким на законних підставах дозволено купувати та вживати алкогольні напої в Україні.</p>
-            {{-- TODO: entities [text] --}}
-            <p>Входячи на цей сайт, ви погоджуєтесь з нашими <a  class="font-semibold" href="">умовами використання</a> та <a class="font-semibold" href="#">політикою конфіденційності</a>.</p>
-            {{-- TODO: entities [text] --}}
-            <p>Насолоджуйтесь відповідально.</p>
-            <p>© {{ now()->year }} MARENGO </p>
+        {{-- Modal 18+ TODO: to add '--show' class --}}
+        <section class="modal eighteen-modal">
+            <div class="modal__background backdrop-blur bg-beige/85"></div>
+            <div class="modal__wrap eighteen-modal__wrap">
+                <h2 class="visually-hidden">{{ __('Підтвердження віку') }}</h2>
+                <img class="m-auto" src="/images/logo.png" width="284" height="100" alt="Marengo">
+                {{-- TODO: entities [text] --}}
+                <p class="eighteen-modal__attention">Ви повинні відповідати юридичному <br> віку, щоб зайти на даний сайт</p>
+                <div>
+                    <p class="font-semibold text-lg">{{ __('Вам уже виповнилося 18 років?') }}</p>
+                    <button type="button" class="eighteen-modal__button text-red border-red">{{ __('Ні') }}</button>
+                    <button type="button" class="eighteen-modal__button text-white bg-blue border-blue">{{ __('Так') }}</button>
+    {{-- TODO: uncommented for step 2 --}}
+                {{-- TODO: localisation --}}
+                {{-- <p class="font-semibold text-lg">{{ __('Виберіть мову сайту') }}</p> --}}
+    {{--            <select>--}}
+    {{--                <option value="uk">Українська</option>--}}
+    {{--                <option value="ru">Русский</option>--}}
+    {{--                <option value="en">English</option>--}}
+    {{--            </select>--}}
+                </div>
+                <div>
+                {{-- TODO: entities [text] --}}
+                <p>Цей сайт призначений для особистого використання особами, яким на законних підставах дозволено купувати та вживати алкогольні напої в Україні.</p>
+                {{-- TODO: entities [text] --}}
+                <p>Входячи на цей сайт, ви погоджуєтесь з нашими <a  class="font-semibold" href="">умовами використання</a> та <a class="font-semibold" href="#">політикою конфіденційності</a>.</p>
+                {{-- TODO: entities [text] --}}
+                <p>Насолоджуйтесь відповідально.</p>
+                <p>© {{ now()->year }} MARENGO </p>
+                </div>
+            </div>
         </section>
         {{-- Scripts --}}
     </body>

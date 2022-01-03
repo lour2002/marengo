@@ -1,0 +1,20 @@
+.cocktail {
+  &__desc{
+    @apply overflow-hidden flex;
+  }
+
+  &__picture{
+    @apply h-full object-cover;
+  }
+
+  &__info {
+    @apply text-blue bg-white/88 overflow-auto;
+    padding: 20px 33px;
+  }
+
+  &__ingredients{
+    td:nth-child(1) {
+      @apply pr-3 pb-3;
+    }
+  }
+}
