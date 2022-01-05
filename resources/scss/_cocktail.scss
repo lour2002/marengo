@@ -8,13 +8,15 @@
   }
 
   &__info {
-    @apply text-blue bg-white/88 overflow-auto;
+    max-width: 75%;
     padding: 20px 33px;
   }
 
-  &__ingredients{
-    td:nth-child(1) {
-      @apply pr-3 pb-3;
-    }
+  &__recipe {
+    @apply absolute z-50 text-white bg-blue;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -10%;
+    padding: 40px;
   }
 }

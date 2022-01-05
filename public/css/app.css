@@ -500,6 +500,17 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-left: auto;
   margin-right: auto;
 }
+.mx-2 {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+.mx-4 {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+.mb-3 {
+  margin-bottom: 0.75rem;
+}
 .mt-1 {
   margin-top: 0.25rem;
 }
@@ -535,9 +546,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .-mt-px {
   margin-top: -1px;
-}
-.mb-3 {
-  margin-bottom: 0.75rem;
 }
 .block {
   display: block;
@@ -711,6 +719,9 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
+.bg-white\/88 {
+  background-color: rgb(255 255 255 / .88);
+}
 .bg-cover {
   background-size: cover;
 }
@@ -761,9 +772,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .pt-8 {
   padding-top: 2rem;
-}
-.pr-3 {
-  padding-right: 0.75rem;
 }
 .text-left {
   text-align: left;
@@ -990,6 +998,36 @@ Ensure the default browser behavior of the `hidden` attribute.
   }
 }
 
+.close {
+  width: 36px;
+  height: 36px;
+}
+.close:before, .close:after{
+  position: absolute;
+  display: block;
+  content: "";
+  width: 30px;
+  height: 2px;
+  border-radius: 2px;
+  transition: transform 0.15ms linear;
+}
+.close:before {
+  transform: rotate(45deg);
+  left: calc((100% - 30px) / 2);
+}
+.close:after {
+  transform: rotate(-45deg);
+  left: calc((100% - 30px) / 2);
+}
+.close.--blue:before, .close.--blue:after{
+  --tw-bg-opacity: 1;
+  background-color: rgb(24 40 87 / var(--tw-bg-opacity));
+}
+.close.--white:before, .close.--white:after{
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
 .drink-slide__picture{
   height: 100%;
   width: 100%;
@@ -1127,6 +1165,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: 100%;
   width: 100%;
 }
+.modal__close{
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
 .modal__wrap{
   position: relative;
   z-index: 10;
@@ -1195,6 +1238,7 @@ Ensure the default browser behavior of the `hidden` attribute.
 /** Second screen */
 .sku-list{
   display: grid;
+  align-items: center;
   padding-top: 8rem;
   padding-bottom: 8rem;
   grid-template-columns: -webkit-min-content 1fr -webkit-min-content;
@@ -1210,6 +1254,7 @@ Ensure the default browser behavior of the `hidden` attribute.
 /** Third screen */
 .cocktails{
   display: grid;
+  align-items: center;
   padding-top: 8rem;
   padding-bottom: 8rem;
   grid-template-columns: -webkit-min-content 1fr -webkit-min-content;
@@ -1238,16 +1283,43 @@ Ensure the default browser behavior of the `hidden` attribute.
   -o-object-fit: cover;
      object-fit: cover;
 }
-.cocktail__info{
-  overflow: auto;
-  background-color: rgb(255 255 255 / .88);
-  --tw-text-opacity: 1;
-  color: rgb(24 40 87 / var(--tw-text-opacity));
+.cocktail__info {
+  max-width: 75%;
   padding: 20px 33px;
 }
-.cocktail__ingredients td:nth-child(1){
+.cocktail__recipe{
+  position: absolute;
+  z-index: 50;
+  --tw-bg-opacity: 1;
+  background-color: rgb(24 40 87 / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+  left: 50%;
+  transform: translateX(-50%);
+  top: -10%;
+  padding: 40px;
+}
+
+.recipe__title{
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-size: 34px;
+  line-height: 41px;
+}
+.recipe__ingredients{
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+.recipe__ingredients td:nth-child(1){
   padding-right: 0.75rem;
   padding-bottom: 0.75rem;
+}
+.recipe__ingredients td:nth-child(2){
+  padding-bottom: 0.75rem;
+}
+.recipe ul {
+  list-style-type: square;
+  padding-left: 20px;
 }
 
 /** Fourth screen */
@@ -1308,9 +1380,4 @@ input#sparkling:checked ~ .main__header [for=sparkling], input#vermouth:checked 
   max-width: 1280px;
   padding-left: 10px;
   padding-right: 10px;
-}
-
-.recipe__title {
-  font-size: 34px;
-  line-height: 41px;
 }

@@ -1,0 +1,22 @@
+.recipe {
+  &__title {
+    @apply text-center mb-6;
+    font-size: 34px;
+    line-height: 41px;
+  }
+
+  &__ingredients{
+    @apply my-6;
+    td:nth-child(1) {
+      @apply pr-3 pb-3;
+    }
+    td:nth-child(2) {
+      @apply pb-3;
+    }
+  }
+
+  ul {
+    list-style-type: square;
+    padding-left: 20px;
+  }
+}

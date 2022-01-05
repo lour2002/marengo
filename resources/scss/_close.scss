@@ -1,0 +1,35 @@
+.close {
+  width: 36px;
+  height: 36px;
+
+
+  &:before, &:after {
+    @apply block absolute;
+    content: '';
+    width: 30px;
+    height: 2px;
+    border-radius: 2px;
+    transition: transform .15ms linear;
+  }
+
+  &:before {
+    transform: rotate(45deg);
+    left: calc((100% - 30px)/2);
+  }
+  &:after {
+    transform: rotate(-45deg);
+    left: calc((100% - 30px)/2);
+
+  }
+
+  &.--blue {
+    &:before, &:after {
+      @apply bg-blue;
+    }
+  }
+  &.--white{
+    &:before, &:after {
+      @apply bg-white;
+    }
+  }
+}

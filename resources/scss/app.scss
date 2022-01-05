@@ -2,6 +2,7 @@
 
 @import "variables";
 
+@import "close";
 @import "drink-slide";
 @import "header";
 @import "list-drinks";
@@ -15,6 +16,7 @@
 /** Third screen */
 @import "cocktails";
 @import "cocktail";
+@import "recipe";
 
 /** Fourth screen */
 @import "history";
@@ -45,11 +47,4 @@ input#vermouth:checked ~ .main__header [for='vermouth']{
   @apply mx-auto max-w-screen-xl;
   padding-left: 10px;
   padding-right: 10px;
-}
-
-.recipe {
-  &__title {
-    font-size: 34px;
-    line-height: 41px;
-  }
 }
