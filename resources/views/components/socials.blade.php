@@ -1,22 +1,20 @@
-<article>
-    <ul class="flex justify-around">
-        <li class="mx-3">
-            <!-- TODO: entities [link, title, img] -->
-            <a href="/" title="Facebook">
-                <img src="/images/social1.svg" loading="lazy" width="31" height="31" alt="Facebook">
-            </a>
-        </li>
-        <li class="mx-3">
-            <!-- TODO: entities [link, title, img] -->
-            <a href="/" title="Instagram">
-                <img src="/images/social2.svg" loading="lazy" width="31" height="31" alt="Instagram">
-            </a>
-        </li>
-        <li class="mx-3">
-            <!-- TODO: entities [link, title, img] -->
-            <a href="/" title="Youtube">
-                <img src="/images/social3.svg" loading="lazy" width="45" height="32" alt="Youtube">
-            </a>
-        </li>
-    </ul>
-</article>
+<ul {{ $attributes }}>
+    <li class="flex">
+        <!-- TODO: entities [link, title, img] -->
+        <a class="m-auto" href="/" title="Facebook">
+            <img class="object-cover" src="/images/social1.svg" loading="lazy" width="32" height="32" alt="Facebook">
+        </a>
+    </li>
+    <li class="flex">
+        <!-- TODO: entities [link, title, img] -->
+        <a class="m-auto" href="/" title="Instagram">
+            <img class="object-cover" src="/images/social2.svg" loading="lazy" width="32" height="32" alt="Instagram">
+        </a>
+    </li>
+    <li class="flex">
+        <!-- TODO: entities [link, title, img] -->
+        <a class="m-auto" href="/" title="Youtube">
+            <img class="object-cover" src="/images/social3.svg" loading="lazy" width="45" height="32" alt="Youtube">
+        </a>
+    </li>
+</ul>

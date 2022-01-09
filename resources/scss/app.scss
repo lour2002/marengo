@@ -1,12 +1,15 @@
 @import "../css/base.css";
 
 @import "variables";
+@import "mixins";
 
 @import "close";
 @import "drink-slide";
 @import "header";
+@import "footer";
 @import "list-drinks";
 @import "main";
+@import "mob-menu";
 @import "modal";
 @import "page";
 
@@ -38,13 +41,11 @@
 
 
 
-input#sparkling:checked ~ .main__header [for='sparkling'],
-input#vermouth:checked ~ .main__header [for='vermouth']{
+input#sparkling:checked ~ header [for='sparkling'],
+input#vermouth:checked ~ header [for='vermouth']{
   @apply bg-red border-red text-white pointer-events-none cursor-default;
 }
 
 .container {
-  @apply mx-auto max-w-screen-xl;
-  padding-left: 10px;
-  padding-right: 10px;
+  @apply mx-auto max-w-screen-xl px-[10px];
 }

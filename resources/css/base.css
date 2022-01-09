@@ -26,19 +26,22 @@
   }
 }
 
+
 /* helpers */
-.visually-hidden {
-  position: absolute;
-  clip: rect(0 0 0 0);
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-}
+@layer utilities {
+  .visually-hidden {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+  }
 
-.image-background {
-  @apply bg-center bg-no-repeat bg-cover;
-}
+  .image-background {
+    @apply bg-center bg-no-repeat bg-cover;
+  }
 
-.link {
-  @apply no-underline hover:underline;
+  .link {
+    @apply no-underline hover:underline;
+  }
 }

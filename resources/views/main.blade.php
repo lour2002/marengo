@@ -21,57 +21,10 @@
         <input name="type-drink" id="vermouth" type="radio" class="visually-hidden" checked>
         <input name="type-drink" id="sparkling" type="radio" class="visually-hidden" >
 
-        <header class="page__header main__header header">
-            {{-- Desktop --}}
-            <nav class="w-9/12 h-full">
-                <div class="header__navigation">
-                    <a href="#top" class="header__logo order-2"><img src="/images/logo.png" width="204" height="72" alt="Marengo"></a>
-                    <div class="header__menu order-1">
-                        <a href="#products" class="link">{{ __('Продукція') }}</a>
-                        <a href="#coctails" class="link">{{ __('Коктейлі') }}</a>
-                        <a href="#history" class="link">{{ __('Історія') }}</a>
-                    </div>
-                    <x-switch-drink class="header__drinks order-3" />
-                </div>
-{{-- TODO: uncommited for step 2 --}}
-{{--                <div>--}}
-{{--                    <select>--}}
-{{--                        <option value="uk">Укр</option>--}}
-{{--                        <option value="ru">Рус</option>--}}
-{{--                        <option value="en">Eng</option>--}}
-{{--                    </select>--}}
-{{--                </div>--}}
-
-            </nav>
-            {{-- Mobile --}}
-            <button class="hidden" type="button">Меню</button>
-            <div class="hidden">
-                <x-switch-drink />
-                <div>
-                    <ul>
-                        <li>
-                            <a class="font-bold text-blue link" href="#">{{ __('Продукція') }}</a>
-                        </li>
-                        <li>
-                            <a class="font-bold text-blue link" href="#">{{ __('Коктейлі') }}</a>
-                        </li>
-                        <li>
-                            <a class="font-bold text-blue link" href="#">{{ __('Історія') }}</a>
-                        </li>
-                    </ul>
-                </div>
-                {{-- TODO: uncommited for step 2 --}}
-{{--                <ul>--}}
-{{--                    <li data-value="uk"><a href="/">Укр</a></li>--}}
-{{--                    <li data-value="ru"><a href="/ru">Рус</a></li>--}}
-{{--                    <li data-value="en"><a href="/en">Eng</a></li>--}}
-{{--                </ul>--}}
-                <x-socials />
-            </div>
-        </header>
+        <x-layout.header />
         <main class="main__content">
             <h1 class="visually-hidden">Marengo</h1>
-            <div id="top">
+            <div id="top" class="hidden">
                 <section>
                     <h2 class="visually-hidden">{{ __("Вермути") }}</h2>
                     <ul>
@@ -161,7 +114,7 @@
                     <h2 class="visually-hidden">{{ __('Ігристі') }}</h2>
                 </section>
             </div>
-            <section id="products" class="sku-list container">
+            <section id="products" class="hidden py-32 items-center sku-list container">
                 <h2 class="visually-hidden">{{ __('Продукція') }}</h2>
                 <x-slider.nav class="mx-4" direction="backward" />
                 <ul class="sku-slide">
@@ -234,7 +187,7 @@
                 <x-slider.nav class="mx-4" direction="forward" />
 
             </section>
-            <section id="coctails" class="cocktails container">
+            <section id="coctails" class="hidden py-32 items-center cocktails container">
                 <h2 class="visually-hidden">{{ __('Коктейлі') }}</h2>
 {{-- TODO: uncommited for step 2 --}}
 {{--                <select>--}}
@@ -350,28 +303,9 @@
                 <x-slider.nav class="mx-4" direction="forward" />
             </section>
 
-            {{-- TODO: entities [img] --}}
-            <section class="history image-background" id="history" style="background-image: url('/images/background.png')">
-                <div class="container">
-                    <div class="history__info">
-                        {{-- TODO: entities [string] --}}
-                        <h2 class="visually-hidden">Історія MARENGO</h2>
-                        <header class="history__title">Історія <b>MARENGO</b></header>
-                        {{-- TODO: entities [text] --}}
-                        <p>История нашего бренда началась в 2001 году, когда была разлита первая бутылка Marengo на винзаводе Коблево. Сама идея создания высококачественного вермута появилась с момента основания завода в 1982 году.  Именно поэтому на символике Marengo выбита эта цифра.</p>
-                        <p>Основным ингредиентом нашего вермута является виноград, из которого мы производим вино высочайшего качества для приготовления Marengo. Наши технологи долго экспериментировали с различными сортами европейского винограда и разнообразным сочетанием трав и пряностей, чтобы получить сбалансированный вкус и аромат, которым вы наслаждаетесь. </p>
-                        <p>История нашего бренда началась в 2001 году, когда была разлита первая бутылка Marengo на винзаводе Коблево. Сама идея создания высококачественного вермута появилась с момента основания завода в 1982 году.  Именно поэтому на символике Marengo выбита эта цифра.</p>
-                    </div>
-                </div>
-            </section>
+            <x-section.history />
         </main>
-        <footer class="page__footer">
-            <div class="main__footer container">
-                <x-doc-list />
-                <img src="/images/logo.png" width="163" height="58" alt="Marengo">
-                <x-socials />
-            </div>
-        </footer>
+        <x-layout.footer />
         {{-- Modal 18+ TODO: to add '--show' class --}}
         <section class="modal eighteen-modal">
             <div class="modal__background backdrop-blur bg-beige/85"></div>

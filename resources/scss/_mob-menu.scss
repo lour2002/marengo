@@ -1,0 +1,21 @@
+.mob-menu {
+  height: calc(100vh - 60px);
+
+  @apply hidden;
+
+  &.--active {
+    @apply block;
+
+    @include _lg {
+      @apply hidden;
+    }
+  }
+
+  &__wrap {
+    grid-template-rows: min-content 1fr min-content;
+  }
+
+  label {
+    @apply py-[12px];
+  }
+}

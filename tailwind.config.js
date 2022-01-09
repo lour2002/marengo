@@ -1,3 +1,5 @@
+const defaultTheme = require('tailwindcss/defaultTheme');
+
 module.exports = {
   content: [
     './resources/**/*.blade.php',
@@ -40,7 +42,11 @@ module.exports = {
       semibold: 600,
       bold: 700,
     },
-
+    screens: {
+      'xs': '320px',
+      'sm': '414px',
+      ...defaultTheme.screens,
+    },
   },
   plugins: [],
 }

@@ -4,12 +4,12 @@
   }
 
   &__bottle {
-    @apply absolute absolute min-h-screen z-10;
+    @apply absolute absolute min-h-screen z-10 object-contain;
     height: 100%;
     top: -55px;
   }
 
-  &__dec-wrap {
+  &__desc-wrap {
   }
 
   &__title {
