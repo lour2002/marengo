@@ -13,7 +13,7 @@
                     <a href="#history" class="link font-bold text-md text-blue px-2">{{ __('Історія') }}</a>
                 </div>
             </div>
-            <x-switch-drink class="header__drinks hidden md:flex md:justify-center md:items-center md:order-1 lg:order-2 xl:justify-start" />
+            <x-block.switch-drink class="header__drinks hidden md:flex md:justify-center md:items-center md:order-1 lg:order-2 xl:justify-start" />
             <button class="header__mob-btn relative w-[40px] h-[40px] order-2 lg:hidden" type="button"></button>
         </div>
 {{-- TODO: uncommited for step 2 --}}
@@ -29,7 +29,7 @@
     {{-- Mobile --}}
     <div class="mob-menu w-full px-[20px] py-[60px] bg-white overflow-auto absolute top-[60px] lg:hidden">
         <div class="mob-menu__wrap grid grid-flow-row gap-[20px] h-full">
-            <x-switch-drink class="grid grid-cols-2 gap-[20px] sm:gap-[40px] text-center" />
+            <x-block.switch-drink class="grid grid-cols-2 gap-[20px] sm:gap-[40px] text-center" />
             <div class="flex w-full">
                 <ul class="my-auto">
                     <li>
@@ -49,7 +49,7 @@
     {{--                    <li data-value="ru"><a href="/ru">Рус</a></li>--}}
     {{--                    <li data-value="en"><a href="/en">Eng</a></li>--}}
     {{--                </ul>--}}
-            <x-socials />
+            <x-block.socials />
         </div>
     </div>
 </header>

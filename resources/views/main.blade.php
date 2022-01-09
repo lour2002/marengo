@@ -22,6 +22,7 @@
         <input name="type-drink" id="sparkling" type="radio" class="visually-hidden" >
 
         <x-layout.header />
+
         <main class="main__content">
             <h1 class="visually-hidden">Marengo</h1>
             <div id="top" class="hidden">
@@ -305,7 +306,9 @@
 
             <x-section.history />
         </main>
+
         <x-layout.footer />
+
         {{-- Modal 18+ TODO: to add '--show' class --}}
         <section class="modal eighteen-modal">
             <div class="modal__background backdrop-blur bg-beige/85"></div>
