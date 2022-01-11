@@ -1,47 +1,13 @@
 .modal {
-  @apply z-40;
-  position: fixed;
-  display: none;
+  @apply hidden;
 
   &.--show {
-    display: block;
-  }
-
-  &__background {
-    @apply absolute h-full w-full;
-  }
-
-  &__close {
-    @apply absolute top-4 right-4;
-  }
-
-  &__wrap{
-    @apply relative z-10;
+    @apply block;
   }
 }
 
 .eighteen-modal {
-  @apply text-blue text-center w-screen h-screen;
-
   &__wrap {
-    @apply h-full m-auto grid grid-flow-row justify-center;
     grid-template-rows: min-content min-content 1fr min-content;
-    row-gap: 80px;
-    max-width: 1024px;
-    padding: 80px 10px 40px;
-  }
-
-  &__attention{
-    @apply uppercase;
-    font-size: 30px;
-    line-height: 36px;
-  }
-
-  &__button {
-    @apply border-2 border-solid;
-    width: 180px;
-    height: 55px;
-    line-height: 55px;
-    font-size: 20px;
   }
 }

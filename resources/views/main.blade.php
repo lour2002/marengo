@@ -204,7 +204,7 @@
                             {{-- TODO: entities [img] --}}
                             <img class="cocktail__picture" src="/images/coctail.png" alt="Сицилия Sicilia" width="227" height="526">
                             <div class="text-blue bg-white/88 overflow-auto">
-                                <button class="close --blue modal__close" type="button"></button>
+                                <button class="close --blue absolute top-4 right-4" type="button"></button>
                                 {{-- TODO: entities [string] --}}
                                 <div class="cocktail__info">
                                     <h3 class="recipe__title text-center">Сицилия <br> Sicilia</h3>
@@ -243,7 +243,7 @@
 
                         {{-- TODO: entities [recipe] --}}
                         <div class="cocktail__recipe recipe">
-                            <button class="close --white modal__close" type="button"></button>
+                            <button class="close --white absolute top-4 right-4" type="button"></button>
                             {{-- TODO: entities [string] --}}
                             <h3 class="recipe__title">Сироп <br> гвоздики та перцю</h3>
                             {{-- TODO: entities [text] --}}
@@ -309,38 +309,7 @@
 
         <x-layout.footer />
 
-        {{-- Modal 18+ TODO: to add '--show' class --}}
-        <section class="modal eighteen-modal">
-            <div class="modal__background backdrop-blur bg-beige/85"></div>
-            <div class="modal__wrap eighteen-modal__wrap">
-                <h2 class="visually-hidden">{{ __('Підтвердження віку') }}</h2>
-                <img class="m-auto" src="/images/logo.png" width="284" height="100" alt="Marengo">
-                {{-- TODO: entities [text] --}}
-                <p class="eighteen-modal__attention">Ви повинні відповідати юридичному <br> віку, щоб зайти на даний сайт</p>
-                <div>
-                    <p class="font-semibold text-lg">{{ __('Вам уже виповнилося 18 років?') }}</p>
-                    <button type="button" class="eighteen-modal__button text-red border-red">{{ __('Ні') }}</button>
-                    <button type="button" class="eighteen-modal__button text-white bg-blue border-blue">{{ __('Так') }}</button>
-    {{-- TODO: uncommented for step 2 --}}
-                {{-- TODO: localisation --}}
-                {{-- <p class="font-semibold text-lg">{{ __('Виберіть мову сайту') }}</p> --}}
-    {{--            <select>--}}
-    {{--                <option value="uk">Українська</option>--}}
-    {{--                <option value="ru">Русский</option>--}}
-    {{--                <option value="en">English</option>--}}
-    {{--            </select>--}}
-                </div>
-                <div>
-                {{-- TODO: entities [text] --}}
-                <p>Цей сайт призначений для особистого використання особами, яким на законних підставах дозволено купувати та вживати алкогольні напої в Україні.</p>
-                {{-- TODO: entities [text] --}}
-                <p>Входячи на цей сайт, ви погоджуєтесь з нашими <a  class="font-semibold" href="">умовами використання</a> та <a class="font-semibold" href="#">політикою конфіденційності</a>.</p>
-                {{-- TODO: entities [text] --}}
-                <p>Насолоджуйтесь відповідально.</p>
-                <p>© {{ now()->year }} MARENGO </p>
-                </div>
-            </div>
-        </section>
+        <x-modal.eighteen />
         {{-- Scripts --}}
     </body>
 </html>

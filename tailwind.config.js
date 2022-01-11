@@ -35,6 +35,7 @@ module.exports = {
       sm: ['14px', '14px'],
       base: ['16px', '20px'],
       md: ['18px', '22px'],
+      mb: ['20px', '24px'],
       lg: ['24px', '30px'],
     },
     fontWeight: {
