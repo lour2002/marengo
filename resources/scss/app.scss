@@ -31,11 +31,26 @@
   height: 65px;
 
   &.--circle {
+    --button-circle-size: 200px;
     @apply bg-blue rounded-r-full disabled:bg-none;
     background-image: url("/images/icons/nav-arrow-white.svg");
-    width: calc(#{$button-circle-size} / 2);
-    height: $button-circle-size;
+    background-size: 14px 42px;
+    width: calc(var(--button-circle-size) / 2);
+    height: var(--button-circle-size);
     background-position: 80% center;
+
+    @include _sm {
+      --button-circle-size: 250px;
+    }
+
+    @include _lg {
+      --button-circle-size: 400px;
+      background-size: 21px 65px;
+    }
+
+    @include _2xl {
+      --button-circle-size: 470px;
+    }
   }
 }
 
@@ -44,6 +59,12 @@
 input#sparkling:checked ~ header [for='sparkling'],
 input#vermouth:checked ~ header [for='vermouth']{
   @apply bg-red border-red text-white pointer-events-none cursor-default;
+}
+
+
+input#sparkling:checked ~ main [data-drink='sparkling'],
+input#vermouth:checked ~ main [data-drink='vermouth']{
+  @apply block;
 }
 
 .container {

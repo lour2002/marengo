@@ -1,7 +1,4 @@
 .drink-slide {
-  &__picture {
-    @apply h-full w-full object-cover object-center;
-  }
 
   &__bottle {
     @apply absolute absolute min-h-screen z-10 object-contain;

@@ -462,15 +462,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   top: 0px;
   bottom: 0px;
 }
-.right-2\/4 {
-  right: 50%;
-}
-.right-1\/4 {
-  right: 25%;
-}
-.bottom-2\/4 {
-  bottom: 50%;
-}
 .top-4 {
   top: 1rem;
 }
@@ -485,6 +476,15 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .top-\[60px\] {
   top: 60px;
+}
+.right-2\/4 {
+  right: 50%;
+}
+.right-1\/4 {
+  right: 25%;
+}
+.bottom-2\/4 {
+  bottom: 50%;
 }
 .z-10 {
   z-index: 10;
@@ -607,20 +607,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 .h-\[50px\] {
   height: 50px;
 }
-.h-\[55px\] {
-  height: 55px;
-}
 .max-h-56 {
   max-height: 14rem;
 }
 .min-h-screen {
   min-height: 100vh;
-}
-.w-9\/12 {
-  width: 75%;
-}
-.w-3\/12 {
-  width: 25%;
 }
 .w-full {
   width: 100%;
@@ -652,8 +643,8 @@ Ensure the default browser behavior of the `hidden` attribute.
 .w-\[170px\] {
   width: 170px;
 }
-.w-\[180px\] {
-  width: 180px;
+.w-0 {
+  width: 0px;
 }
 .max-w-sm {
   max-width: 24rem;
@@ -664,14 +655,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 .max-w-6xl {
   max-width: 72rem;
 }
-.max-w-lg {
-  max-width: 32rem;
+.max-w-screen-lg {
+  max-width: 1024px;
 }
 .max-w-\[180px\] {
   max-width: 180px;
-}
-.max-w-screen-lg {
-  max-width: 1024px;
 }
 .flex-shrink-0 {
   flex-shrink: 0;
@@ -723,9 +711,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .justify-between {
   justify-content: space-between;
-}
-.justify-items-center {
-  justify-items: center;
 }
 .gap-\[10px\] {
   gap: 10px;
@@ -779,14 +764,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-border-opacity: 1;
   border-color: rgb(208 32 48 / var(--tw-border-opacity));
 }
-.bg-red {
-  --tw-bg-opacity: 1;
-  background-color: rgb(208 32 48 / var(--tw-bg-opacity));
-}
-.bg-blue {
-  --tw-bg-opacity: 1;
-  background-color: rgb(24 40 87 / var(--tw-bg-opacity));
-}
 .bg-white\/88 {
   background-color: rgb(255 255 255 / .88);
 }
@@ -796,6 +773,14 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .bg-beige\/85 {
   background-color: rgb(244 236 227 / .85);
+}
+.bg-blue {
+  --tw-bg-opacity: 1;
+  background-color: rgb(24 40 87 / var(--tw-bg-opacity));
+}
+.bg-red {
+  --tw-bg-opacity: 1;
+  background-color: rgb(208 32 48 / var(--tw-bg-opacity));
 }
 .bg-none {
   background-image: none;
@@ -819,6 +804,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 .object-cover {
   -o-object-fit: cover;
      object-fit: cover;
+}
+.object-center {
+  -o-object-position: center;
+     object-position: center;
 }
 .p-6 {
   padding: 1.5rem;
@@ -895,6 +884,12 @@ Ensure the default browser behavior of the `hidden` attribute.
 .pt-8 {
   padding-top: 2rem;
 }
+.pt-\[60px\] {
+  padding-top: 60px;
+}
+.pt-\[55px\] {
+  padding-top: 55px;
+}
 .text-left {
   text-align: left;
 }
@@ -926,9 +921,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .text-\[32px\] {
   font-size: 32px;
 }
-.text-\[20px\] {
-  font-size: 20px;
-}
 .text-mb {
   font-size: 20px;
   line-height: 24px;
@@ -953,12 +945,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .leading-\[40px\] {
   line-height: 40px;
-}
-.leading-\[24px\] {
-  line-height: 24px;
-}
-.leading-\[55px\] {
-  line-height: 55px;
 }
 .tracking-wide {
   letter-spacing: 0.025em;
@@ -1180,6 +1166,10 @@ Ensure the default browser behavior of the `hidden` attribute.
     padding-bottom: 40px;
   }
 
+  .md\:pt-\[55px\] {
+    padding-top: 55px;
+  }
+
   .md\:text-\[30px\] {
     font-size: 30px;
   }
@@ -1235,6 +1225,14 @@ Ensure the default browser behavior of the `hidden` attribute.
     height: 90px;
   }
 
+  .lg\:w-9\/12 {
+    width: 75%;
+  }
+
+  .lg\:w-3\/12 {
+    width: 25%;
+  }
+
   .lg\:max-w-\[550px\] {
     max-width: 550px;
   }
@@ -1265,6 +1263,10 @@ Ensure the default browser behavior of the `hidden` attribute.
     padding-right: 0px;
   }
 
+  .lg\:pt-\[55px\] {
+    padding-top: 55px;
+  }
+
   .lg\:text-base {
     font-size: 16px;
     line-height: 20px;
@@ -1286,6 +1288,14 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .xl\:w-\[204px\] {
     width: 204px;
+  }
+
+  .xl\:w-9\/12 {
+    width: 75%;
+  }
+
+  .xl\:w-3\/12 {
+    width: 25%;
   }
 
   .xl\:justify-start {
@@ -1331,14 +1341,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
-.drink-slide__picture{
-  height: 100%;
-  width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
-}
 .drink-slide__bottle {
   height: 100%;
   top: -55px;
@@ -1443,11 +1445,15 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 .list-drinks__part-one {
-  min-height: calc(100vh - 55px);
-  position: relative;
+  height: calc(100vh - 60px);
 }
-.list-drinks__part-two {
-  min-height: calc(100vh - 55px);
+@media (min-width: 1024px) {
+  .list-drinks__part-one {
+    height: calc(100vh - 55px);
+  }
+  .list-drinks__part-two {
+    height: calc(100vh - 55px);
+  }
 }
 .list-drinks__info-wrap {
   transform: translateX(calc(50% - 100px));
@@ -1457,14 +1463,7 @@ Ensure the default browser behavior of the `hidden` attribute.
   bottom: 40px;
   position: absolute;
 }
-.list-drinks__navigation{
-  position: absolute;
-  display: flex;
-}
 
-.main__content {
-  padding-top: 55px;
-}
 .main__footer {
   grid-column-gap: 30px;
   grid-template-columns: 1fr -webkit-max-content -webkit-max-content;
@@ -1621,9 +1620,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-repeat: no-repeat;
 }
 .nav-arrow.--circle {
+  --button-circle-size: 200px;
   background-image: url("/images/icons/nav-arrow-white.svg");
-  width: calc(400px / 2);
-  height: 400px;
+  background-size: 14px 42px;
+  width: calc(var(--button-circle-size) / 2);
+  height: var(--button-circle-size);
   background-position: 80% center;
   border-top-right-radius: 9999px;
   border-bottom-right-radius: 9999px;
@@ -1632,6 +1633,22 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .nav-arrow.--circle:disabled{
   background-image: none;
+}
+@media (min-width: 414px) {
+  .nav-arrow.--circle {
+    --button-circle-size: 250px;
+  }
+}
+@media (min-width: 1024px) {
+  .nav-arrow.--circle {
+    --button-circle-size: 400px;
+    background-size: 21px 65px;
+  }
+}
+@media (min-width: 1280px) {
+  .nav-arrow.--circle {
+    --button-circle-size: 470px;
+  }
 }
 
 input#sparkling:checked ~ header [for=sparkling], input#vermouth:checked ~ header [for=vermouth]{
@@ -1643,6 +1660,10 @@ input#sparkling:checked ~ header [for=sparkling], input#vermouth:checked ~ heade
   background-color: rgb(208 32 48 / var(--tw-bg-opacity));
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+input#sparkling:checked ~ main [data-drink=sparkling], input#vermouth:checked ~ main [data-drink=vermouth]{
+  display: block;
 }
 
 .container{

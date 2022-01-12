@@ -1,5 +1,11 @@
 // Media
 
+@mixin _2xl {
+  @media (min-width: 1440px){
+      @content;
+  }
+}
+
 @mixin _xl {
   @media (min-width: 1280px){
       @content;

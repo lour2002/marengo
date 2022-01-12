@@ -1,10 +1,15 @@
 .list-drinks {
   &__part-one {
-    @apply relative;
-    min-height: calc(100vh - 55px);
+    height: calc(100vh - 60px);
+
+    @include _lg {
+      height: calc(100vh - 55px);
+    }
   }
   &__part-two {
-    min-height: calc(100vh - 55px);
+    @include _lg {
+      height: calc(100vh - 55px);
+    }
   }
 
   &__info-wrap {
@@ -14,9 +19,5 @@
     max-width: 780px;
     width: calc(100% - #{$button-circle-size / 2});
     bottom: 40px;
-  }
-
-  &__navigation {
-    @apply absolute flex;
   }
 }
