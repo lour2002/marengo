@@ -1,23 +1,35 @@
 .list-drinks {
   &__part-one {
-    height: calc(100vh - 60px);
-
-    @include _lg {
-      height: calc(100vh - 55px);
-    }
+    height: calc(100vh - var(--header-height));
   }
   &__part-two {
-    @include _lg {
-      height: calc(100vh - 55px);
-    }
+    height: calc(100vh - var(--header-height));
   }
 
   &__info-wrap {
-    @apply absolute;
-    transform: translateX(calc(50% - #{$button-circle-size / 4}));
-    padding: 0 10px;
-    max-width: 780px;
-    width: calc(100% - #{$button-circle-size / 2});
-    bottom: 40px;
+    @include _xl {
+      left: calc(50% - var(--button-circle-size) / 4);
+      width: calc(100% - var(--button-circle-size) / 2);
+    }
+
+    &.--active {
+      @media screen and (max-width: 1279px) {
+        @apply bg-blue/88 overflow-auto top-0 bottom-auto pb-x md:pb-2x;
+        height: calc(100vh - var(--header-height));
+
+        .close {
+          @apply block;
+        }
+
+        .drink-slide__info {
+          @apply block text-white md:self-center;
+          background: none;
+        }
+        .drink-slide__title {
+          @apply block self-start md:self-center;
+          background: none;
+        }
+      }
+    }
   }
 }

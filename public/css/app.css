@@ -477,14 +477,17 @@ Ensure the default browser behavior of the `hidden` attribute.
 .top-\[60px\] {
   top: 60px;
 }
+.left-2\/4 {
+  left: 50%;
+}
 .right-2\/4 {
   right: 50%;
 }
-.right-1\/4 {
-  right: 25%;
-}
 .bottom-2\/4 {
   bottom: 50%;
+}
+.bottom-x {
+  bottom: 10px;
 }
 .z-10 {
   z-index: 10;
@@ -494,6 +497,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .z-50 {
   z-index: 50;
+}
+.z-20 {
+  z-index: 20;
 }
 .order-2 {
   order: 2;
@@ -556,7 +562,13 @@ Ensure the default browser behavior of the `hidden` attribute.
 .-mt-px {
   margin-top: -1px;
 }
-.mb-\[40px\] {
+.mt-2x {
+  margin-top: 20px;
+}
+.mr-2x {
+  margin-right: 20px;
+}
+.mb-4x {
   margin-bottom: 40px;
 }
 .-mt-\[50px\] {
@@ -564,6 +576,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .block {
   display: block;
+}
+.inline-block {
+  display: inline-block;
 }
 .flex {
   display: flex;
@@ -598,11 +613,14 @@ Ensure the default browser behavior of the `hidden` attribute.
 .h-\[60px\] {
   height: 60px;
 }
-.h-\[40px\] {
+.h-4x {
   height: 40px;
 }
 .h-screen {
   height: 100vh;
+}
+.h-3\/4 {
+  height: 75%;
 }
 .h-\[50px\] {
   height: 50px;
@@ -634,7 +652,7 @@ Ensure the default browser behavior of the `hidden` attribute.
 .w-\[112px\] {
   width: 112px;
 }
-.w-\[40px\] {
+.w-4x {
   width: 40px;
 }
 .w-screen {
@@ -642,6 +660,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .w-\[170px\] {
   width: 170px;
+}
+.w-\[130px\] {
+  width: 130px;
 }
 .w-0 {
   width: 0px;
@@ -661,11 +682,25 @@ Ensure the default browser behavior of the `hidden` attribute.
 .max-w-\[180px\] {
   max-width: 180px;
 }
+.max-w-screen-md {
+  max-width: 768px;
+}
 .flex-shrink-0 {
   flex-shrink: 0;
 }
+.grow {
+  flex-grow: 1;
+}
+.-translate-x-2\/4 {
+  --tw-translate-x: -50%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
 .translate-x-2\/4 {
   --tw-translate-x: 50%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+.translate-y-\[10\%\] {
+  --tw-translate-y: 10%;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 .translate-y-2\/4 {
@@ -700,6 +735,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .grid-cols-2 {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
+.flex-col {
+  flex-direction: column;
+}
 .flex-wrap {
   flex-wrap: wrap;
 }
@@ -712,11 +750,14 @@ Ensure the default browser behavior of the `hidden` attribute.
 .justify-between {
   justify-content: space-between;
 }
-.gap-\[10px\] {
+.gap-x {
   gap: 10px;
 }
-.gap-\[20px\] {
+.gap-2x {
   gap: 20px;
+}
+.self-center {
+  align-self: center;
 }
 .justify-self-center {
   justify-self: center;
@@ -778,6 +819,9 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-bg-opacity: 1;
   background-color: rgb(24 40 87 / var(--tw-bg-opacity));
 }
+.bg-blue\/88 {
+  background-color: rgb(24 40 87 / .88);
+}
 .bg-red {
   --tw-bg-opacity: 1;
   background-color: rgb(208 32 48 / var(--tw-bg-opacity));
@@ -801,6 +845,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 .bg-no-repeat {
   background-repeat: no-repeat;
 }
+.object-contain {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
 .object-cover {
   -o-object-fit: cover;
      object-fit: cover;
@@ -812,10 +860,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 .p-6 {
   padding: 1.5rem;
 }
-.p-\[10px\] {
+.p-x {
   padding: 10px;
 }
-.p-\[20px\] {
+.p-2x {
   padding: 20px;
 }
 .py-32 {
@@ -846,11 +894,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-left: 1rem;
   padding-right: 1rem;
 }
-.py-\[10px\] {
+.py-x {
   padding-top: 10px;
   padding-bottom: 10px;
 }
-.px-\[10px\] {
+.px-x {
   padding-left: 10px;
   padding-right: 10px;
 }
@@ -858,13 +906,16 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-left: 0.5rem;
   padding-right: 0.5rem;
 }
-.px-\[20px\] {
+.px-2x {
   padding-left: 20px;
   padding-right: 20px;
 }
 .py-\[60px\] {
   padding-top: 60px;
   padding-bottom: 60px;
+}
+.pt-\[60px\] {
+  padding-top: 60px;
 }
 .pl-3 {
   padding-left: 0.75rem;
@@ -884,11 +935,8 @@ Ensure the default browser behavior of the `hidden` attribute.
 .pt-8 {
   padding-top: 2rem;
 }
-.pt-\[60px\] {
-  padding-top: 60px;
-}
-.pt-\[55px\] {
-  padding-top: 55px;
+.pb-x {
+  padding-bottom: 10px;
 }
 .text-left {
   text-align: left;
@@ -943,9 +991,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .leading-7 {
   line-height: 1.75rem;
 }
-.leading-\[40px\] {
-  line-height: 40px;
-}
 .tracking-wide {
   letter-spacing: 0.025em;
 }
@@ -971,6 +1016,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 .underline {
   -webkit-text-decoration-line: underline;
           text-decoration-line: underline;
+}
+.no-underline {
+  -webkit-text-decoration-line: none;
+          text-decoration-line: none;
 }
 .antialiased {
   -webkit-font-smoothing: antialiased;
@@ -1064,6 +1113,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 @media (min-width: 640px) {
 
+  .sm\:w-\[140px\] {
+    width: 140px;
+  }
+
   .sm\:items-center {
     align-items: center;
   }
@@ -1072,7 +1125,7 @@ Ensure the default browser behavior of the `hidden` attribute.
     justify-content: flex-start;
   }
 
-  .sm\:gap-\[40px\] {
+  .sm\:gap-4x {
     gap: 40px;
   }
 
@@ -1090,7 +1143,21 @@ Ensure the default browser behavior of the `hidden` attribute.
     line-height: 14px;
   }
 }
+@media (min-width: 1800px) {
+
+  .\33xl\:z-30 {
+    z-index: 30;
+  }
+}
 @media (min-width: 768px) {
+
+  .md\:bottom-\[10\%\] {
+    bottom: 10%;
+  }
+
+  .md\:bottom-2x {
+    bottom: 20px;
+  }
 
   .md\:order-1 {
     order: 1;
@@ -1117,6 +1184,10 @@ Ensure the default browser behavior of the `hidden` attribute.
     height: 55px;
   }
 
+  .md\:h-\[65\%\] {
+    height: 65%;
+  }
+
   .md\:min-h-screen {
     min-height: 100vh;
   }
@@ -1133,6 +1204,15 @@ Ensure the default browser behavior of the `hidden` attribute.
     max-width: 860px;
   }
 
+  .md\:max-w-\[458px\] {
+    max-width: 458px;
+  }
+
+  .md\:translate-y-1\/4 {
+    --tw-translate-y: 25%;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+
   .md\:translate-y-2\/4 {
     --tw-translate-y: 50%;
     transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -1146,7 +1226,7 @@ Ensure the default browser behavior of the `hidden` attribute.
     justify-content: center;
   }
 
-  .md\:gap-\[40px\] {
+  .md\:gap-4x {
     gap: 40px;
   }
 
@@ -1162,12 +1242,8 @@ Ensure the default browser behavior of the `hidden` attribute.
     padding-bottom: 0px;
   }
 
-  .md\:pb-\[40px\] {
+  .md\:pb-4x {
     padding-bottom: 40px;
-  }
-
-  .md\:pt-\[55px\] {
-    padding-top: 55px;
   }
 
   .md\:text-\[30px\] {
@@ -1177,6 +1253,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   .md\:text-lg {
     font-size: 24px;
     line-height: 30px;
+  }
+
+  .md\:text-\[36px\] {
+    font-size: 36px;
   }
 
   .md\:leading-\[36px\] {
@@ -1225,14 +1305,6 @@ Ensure the default browser behavior of the `hidden` attribute.
     height: 90px;
   }
 
-  .lg\:w-9\/12 {
-    width: 75%;
-  }
-
-  .lg\:w-3\/12 {
-    width: 25%;
-  }
-
   .lg\:max-w-\[550px\] {
     max-width: 550px;
   }
@@ -1249,7 +1321,7 @@ Ensure the default browser behavior of the `hidden` attribute.
     gap: 30px;
   }
 
-  .lg\:gap-\[40px\] {
+  .lg\:gap-4x {
     gap: 40px;
   }
 
@@ -1274,12 +1346,32 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 @media (min-width: 1280px) {
 
+  .xl\:static {
+    position: static;
+  }
+
   .xl\:absolute {
     position: absolute;
   }
 
   .xl\:top-\[17px\] {
     top: 17px;
+  }
+
+  .xl\:bottom-4x {
+    bottom: 40px;
+  }
+
+  .xl\:right-1\/4 {
+    right: 25%;
+  }
+
+  .xl\:block {
+    display: block;
+  }
+
+  .xl\:hidden {
+    display: none;
   }
 
   .xl\:h-\[55px\] {
@@ -1298,16 +1390,77 @@ Ensure the default browser behavior of the `hidden` attribute.
     width: 25%;
   }
 
+  .xl\:max-w-screen-md {
+    max-width: 768px;
+  }
+
+  .xl\:max-w-none {
+    max-width: none;
+  }
+
+  .xl\:translate-y-0 {
+    --tw-translate-y: 0px;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+
   .xl\:justify-start {
     justify-content: flex-start;
+  }
+
+  .xl\:self-start {
+    align-self: flex-start;
+  }
+
+  .xl\:bg-white\/88 {
+    background-color: rgb(255 255 255 / .88);
+  }
+
+  .xl\:object-cover {
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+
+  .xl\:px-x {
+    padding-left: 10px;
+    padding-right: 10px;
   }
 
   .xl\:pt-\[80px\] {
     padding-top: 80px;
   }
 
-  .xl\:pb-\[40px\] {
+  .xl\:pb-4x {
     padding-bottom: 40px;
+  }
+
+  .xl\:pt-\[55px\] {
+    padding-top: 55px;
+  }
+
+  .xl\:text-left {
+    text-align: left;
+  }
+
+  .xl\:text-blue {
+    --tw-text-opacity: 1;
+    color: rgb(24 40 87 / var(--tw-text-opacity));
+  }
+}
+@media (min-width: 768px) {
+
+  @media (orientation: portrait) {
+
+    .md\:portrait\:h-\[65\%\] {
+      height: 65%;
+    }
+  }
+
+  @media (orientation: portrait) {
+
+    .md\:portrait\:translate-y-1\/4 {
+      --tw-translate-y: 25%;
+      transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+    }
   }
 }
 
@@ -1341,30 +1494,20 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
-.drink-slide__bottle {
-  height: 100%;
-  top: -55px;
-  position: absolute;
-  z-index: 10;
-  min-height: 100vh;
-  -o-object-fit: contain;
-     object-fit: contain;
+@media (min-width: 1280px) {
+  .drink-slide__bottle {
+    height: calc(100vh - var(--header-height));
+  }
 }
-.drink-slide__title {
-  font-size: 36px;
-  line-height: 44px;
-  padding: 18px 20px;
-  display: inline-block;
-  background-color: rgb(24 40 87 / .88);
-  font-weight: 400;
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-.drink-slide__desc {
-  padding: 20px;
-  background-color: rgb(255 255 255 / .88);
-  --tw-text-opacity: 1;
-  color: rgb(24 40 87 / var(--tw-text-opacity));
+@media (min-width: 1800px) {
+  .drink-slide__bottle {
+    top: calc(-1 * var(--header-height));
+  }
+  @media (min-width: 1800px){
+    .drink-slide__bottle{
+      height: 100vh;
+    }
+  }
 }
 .drink-slide__link {
   font-size: 20px;
@@ -1445,23 +1588,73 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 .list-drinks__part-one {
-  height: calc(100vh - 60px);
+  height: calc(100vh - var(--header-height));
 }
-@media (min-width: 1024px) {
-  .list-drinks__part-one {
-    height: calc(100vh - 55px);
-  }
-  .list-drinks__part-two {
-    height: calc(100vh - 55px);
+.list-drinks__part-two {
+  height: calc(100vh - var(--header-height));
+}
+@media (min-width: 1280px) {
+  .list-drinks__info-wrap {
+    left: calc(50% - var(--button-circle-size) / 4);
+    width: calc(100% - var(--button-circle-size) / 2);
   }
 }
-.list-drinks__info-wrap {
-  transform: translateX(calc(50% - 100px));
-  padding: 0 10px;
-  max-width: 780px;
-  width: calc(100% - 200px);
-  bottom: 40px;
-  position: absolute;
+@media screen and (max-width: 1279px) {
+  .list-drinks__info-wrap.--active {
+    height: calc(100vh - var(--header-height));
+  }
+  .list-drinks__info-wrap.--active{
+    top: 0px;
+  }
+  .list-drinks__info-wrap.--active{
+    bottom: auto;
+  }
+  .list-drinks__info-wrap.--active{
+    overflow: auto;
+  }
+  .list-drinks__info-wrap.--active{
+    background-color: rgb(24 40 87 / .88);
+  }
+  .list-drinks__info-wrap.--active{
+    padding-bottom: 10px;
+  }
+  @media (min-width: 768px){
+    .list-drinks__info-wrap.--active{
+      padding-bottom: 20px;
+    }
+  }
+  .list-drinks__info-wrap.--active .close{
+    display: block;
+  }
+  .list-drinks__info-wrap.--active .drink-slide__info {
+    background: none;
+  }
+  .list-drinks__info-wrap.--active .drink-slide__info{
+    display: block;
+  }
+  .list-drinks__info-wrap.--active .drink-slide__info{
+    --tw-text-opacity: 1;
+    color: rgb(255 255 255 / var(--tw-text-opacity));
+  }
+  @media (min-width: 768px){
+    .list-drinks__info-wrap.--active .drink-slide__info{
+      align-self: center;
+    }
+  }
+  .list-drinks__info-wrap.--active .drink-slide__title {
+    background: none;
+  }
+  .list-drinks__info-wrap.--active .drink-slide__title{
+    display: block;
+  }
+  .list-drinks__info-wrap.--active .drink-slide__title{
+    align-self: flex-start;
+  }
+  @media (min-width: 768px){
+    .list-drinks__info-wrap.--active .drink-slide__title{
+      align-self: center;
+    }
+  }
 }
 
 .main__footer {
@@ -1610,6 +1803,32 @@ Ensure the default browser behavior of the `hidden` attribute.
   }
 }
 
+:root {
+  --header-height: 60px;
+  --button-circle-size: 200px;
+}
+@media (min-width: 414px) {
+  :root {
+    --button-circle-size: 250px;
+  }
+}
+@media (min-width: 768px) {
+  :root {
+    --button-circle-size: 350px;
+  }
+}
+@media (min-width: 1280px) {
+  :root {
+    --header-height: 55px;
+    --button-circle-size: 400px;
+  }
+}
+@media (min-width: 1440px) {
+  :root {
+    --button-circle-size: 500px;
+  }
+}
+
 .nav-arrow {
   background-image: url("/images/icons/nav-arrow-blue.svg");
   width: 21px;
@@ -1620,7 +1839,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-repeat: no-repeat;
 }
 .nav-arrow.--circle {
-  --button-circle-size: 200px;
   background-image: url("/images/icons/nav-arrow-white.svg");
   background-size: 14px 42px;
   width: calc(var(--button-circle-size) / 2);
@@ -1634,20 +1852,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .nav-arrow.--circle:disabled{
   background-image: none;
 }
-@media (min-width: 414px) {
-  .nav-arrow.--circle {
-    --button-circle-size: 250px;
-  }
-}
 @media (min-width: 1024px) {
   .nav-arrow.--circle {
-    --button-circle-size: 400px;
     background-size: 21px 65px;
-  }
-}
-@media (min-width: 1280px) {
-  .nav-arrow.--circle {
-    --button-circle-size: 470px;
   }
 }
 

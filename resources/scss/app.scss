@@ -24,6 +24,29 @@
 /** Fourth screen */
 @import "history";
 
+:root {
+  --header-height: 60px;
+  --button-circle-size: 200px;
+
+
+  @include _sm {
+    --button-circle-size: 250px;
+  }
+
+  @include _md {
+    --button-circle-size: 350px;
+  }
+
+  @include _xl {
+    --header-height: 55px;
+    --button-circle-size: 400px;
+  }
+
+  @include _2xl {
+    --button-circle-size: 500px;
+  }
+}
+
 .nav-arrow {
   @apply block border-none bg-white/0 bg-no-repeat ;
   background-image: url("/images/icons/nav-arrow-blue.svg");
@@ -31,7 +54,6 @@
   height: 65px;
 
   &.--circle {
-    --button-circle-size: 200px;
     @apply bg-blue rounded-r-full disabled:bg-none;
     background-image: url("/images/icons/nav-arrow-white.svg");
     background-size: 14px 42px;
@@ -39,17 +61,8 @@
     height: var(--button-circle-size);
     background-position: 80% center;
 
-    @include _sm {
-      --button-circle-size: 250px;
-    }
-
     @include _lg {
-      --button-circle-size: 400px;
       background-size: 21px 65px;
-    }
-
-    @include _2xl {
-      --button-circle-size: 470px;
     }
   }
 }
@@ -68,5 +81,5 @@ input#vermouth:checked ~ main [data-drink='vermouth']{
 }
 
 .container {
-  @apply mx-auto max-w-screen-xl px-[10px];
+  @apply mx-auto max-w-screen-xl px-x;
 }

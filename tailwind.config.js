@@ -19,6 +19,11 @@ module.exports = {
         '88': '.88',
         '85': '.85'
       },
+      spacing: {
+        'x': '10px',
+        '2x': '20px',
+        '4x': '40px',
+      }
     },
     colors: {
       blue: '#182857',
@@ -47,6 +52,7 @@ module.exports = {
       'xs': '320px',
       'sm': '414px',
       '2xl': '1440px',
+      '3xl': '1800px',
       ...defaultTheme.screens,
     },
   },

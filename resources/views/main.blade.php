@@ -23,7 +23,7 @@
 
         <x-layout.header />
 
-        <main class="pt-[60px] lg:pt-[55px]">
+        <main class="pt-[60px] xl:pt-[55px]">
             <h1 class="visually-hidden">Marengo</h1>
             <x-section.bottles />
             <section id="products" class="hidden py-32 items-center sku-list container">

@@ -1,24 +1,14 @@
 .drink-slide {
 
   &__bottle {
-    @apply absolute absolute min-h-screen z-10 object-contain;
-    height: 100%;
-    top: -55px;
-  }
+    @include _xl {
+      height: calc(100vh - var(--header-height));
+    }
 
-  &__desc-wrap {
-  }
-
-  &__title {
-    @apply inline-block font-normal text-white bg-blue/88;
-    font-size: 36px;
-    line-height: 44px;
-    padding: 18px 20px;
-  }
-
-  &__desc {
-    @apply text-blue bg-white/88;
-    padding: 20px;
+    @include _3xl {
+      @apply 3xl:h-screen;
+      top: calc(-1*var(--header-height));
+    }
   }
 
   &__link {

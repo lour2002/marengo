@@ -1,7 +1,7 @@
 <header class="header --mob-menu-active w-full h-[60px] xl:h-[55px] bg-white fixed z-30 select-none">
     {{-- Desktop --}}
     <nav class="h-full">
-        <div class="header__navigation h-full grid items-center px-[10px] lg:px-0">
+        <div class="header__navigation h-full grid items-center px-x lg:px-0">
             <a href="#top" class="header__logo order-0 lg:order-2 xl:w-[204px]">
                 <img class="w-[112px] xl:w-[204px] xl:absolute xl:top-[17px]"
                      src="/images/logo.png" width="204" height="72" alt="Marengo">
@@ -14,7 +14,7 @@
                 </div>
             </div>
             <x-block.switch-drink class="header__drinks hidden md:flex md:justify-center md:items-center md:order-1 lg:order-2 xl:justify-start" />
-            <button class="header__mob-btn relative w-[40px] h-[40px] order-2 lg:hidden" type="button"></button>
+            <button class="header__mob-btn relative w-4x h-4x order-2 lg:hidden" type="button"></button>
         </div>
 {{-- TODO: uncommited for step 2 --}}
 {{--                <div>--}}
@@ -27,19 +27,19 @@
 
     </nav>
     {{-- Mobile --}}
-    <div class="mob-menu w-full px-[20px] py-[60px] bg-white overflow-auto absolute top-[60px] lg:hidden">
-        <div class="mob-menu__wrap grid grid-flow-row gap-[20px] h-full">
-            <x-block.switch-drink class="grid grid-cols-2 gap-[20px] sm:gap-[40px] text-center" />
+    <div class="mob-menu w-full px-2x py-[60px] bg-white overflow-auto absolute top-[60px] lg:hidden">
+        <div class="mob-menu__wrap grid grid-flow-row gap-2x h-full">
+            <x-block.switch-drink class="grid grid-cols-2 gap-2x sm:gap-4x text-center" />
             <div class="flex w-full">
                 <ul class="my-auto">
                     <li>
-                        <a class="text-[32px] leading-[40px] font-bold text-blue link block py-[10px]" href="#">{{ __('Продукція') }}</a>
+                        <a class="text-[32px] leading-4x font-bold text-blue link block py-x" href="#">{{ __('Продукція') }}</a>
                     </li>
                     <li>
-                        <a class="text-[32px] leading-[40px] font-bold text-blue link block py-[10px]" href="#">{{ __('Коктейлі') }}</a>
+                        <a class="text-[32px] leading-4x font-bold text-blue link block py-x" href="#">{{ __('Коктейлі') }}</a>
                     </li>
                     <li>
-                        <a class="text-[32px] leading-[40px] font-bold text-blue link block py-[10px]" href="#">{{ __('Історія') }}</a>
+                        <a class="text-[32px] leading-4x font-bold text-blue link block py-x" href="#">{{ __('Історія') }}</a>
                     </li>
                 </ul>
             </div>
