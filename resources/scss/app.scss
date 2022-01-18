@@ -48,7 +48,7 @@
 }
 
 .nav-arrow {
-  @apply block border-none bg-white/0 bg-no-repeat ;
+  @apply border-none bg-white/0 bg-no-repeat ;
   background-image: url("/images/icons/nav-arrow-blue.svg");
   width: 21px;
   height: 65px;
@@ -74,6 +74,11 @@ input#vermouth:checked ~ header [for='vermouth']{
   @apply bg-red border-red text-white pointer-events-none cursor-default;
 }
 
+
+input#sparkling:checked ~ main [data-drink='sparkling'],
+input#vermouth:checked ~ main [data-drink='vermouth']{
+  @apply block;
+}
 
 input#sparkling:checked ~ main [data-drink='sparkling'],
 input#vermouth:checked ~ main [data-drink='vermouth']{
