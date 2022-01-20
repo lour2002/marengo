@@ -1,4 +1,4 @@
-<header class="header --mob-menu-active w-full h-[60px] xl:h-[55px] bg-white fixed z-30 select-none">
+<header class="header --mob-menu-active w-full h-[60px] xl:h-[55px] fixed z-30 select-none">
     {{-- Desktop --}}
     <nav class="h-full">
         <div class="header__navigation h-full grid items-center px-x lg:px-0">
@@ -13,8 +13,8 @@
                     <a href="#history" class="link font-bold text-md text-blue px-2">{{ __('Історія') }}</a>
                 </div>
             </div>
-            <x-block.switch-drink class="header__drinks hidden md:flex md:justify-center md:items-center md:order-1 lg:order-2 xl:justify-start" />
-            <button class="header__mob-btn relative w-4x h-4x order-2 lg:hidden" type="button"></button>
+            <x-block.switch-drink class="header__drinks hidden md:flex md:justify-center md:items-center md:order-1 lg:order-2 xl:max-w-[550px] xl:justify-start" />
+            <button class="header__mob-btn relative w-4x h-4x order-2 lg:hidden js-mob-menu__btn" type="button"></button>
         </div>
 {{-- TODO: uncommited for step 2 --}}
 {{--                <div>--}}
@@ -27,19 +27,19 @@
 
     </nav>
     {{-- Mobile --}}
-    <div class="mob-menu w-full px-2x py-[60px] bg-white overflow-auto absolute top-[60px] lg:hidden">
+    <div class="mob-menu w-full px-2x py-[40px] bg-white overflow-auto absolute top-[60px] lg:hidden js-mob-menu">
         <div class="mob-menu__wrap grid grid-flow-row gap-2x h-full">
             <x-block.switch-drink class="grid grid-cols-2 gap-2x sm:gap-4x text-center" />
             <div class="flex w-full">
-                <ul class="my-auto">
+                <ul class="grid gap-4x my-auto">
                     <li>
-                        <a class="text-[32px] leading-4x font-bold text-blue link block py-x" href="#">{{ __('Продукція') }}</a>
+                        <a class="text-[32px] leading-[40px] font-bold text-blue link block py-x" href="#">{{ __('Продукція') }}</a>
                     </li>
                     <li>
-                        <a class="text-[32px] leading-4x font-bold text-blue link block py-x" href="#">{{ __('Коктейлі') }}</a>
+                        <a class="text-[32px] leading-[40px] font-bold text-blue link block py-x" href="#">{{ __('Коктейлі') }}</a>
                     </li>
                     <li>
-                        <a class="text-[32px] leading-4x font-bold text-blue link block py-x" href="#">{{ __('Історія') }}</a>
+                        <a class="text-[32px] leading-[40px] font-bold text-blue link block py-x" href="#">{{ __('Історія') }}</a>
                     </li>
                 </ul>
             </div>
@@ -49,7 +49,7 @@
     {{--                    <li data-value="ru"><a href="/ru">Рус</a></li>--}}
     {{--                    <li data-value="en"><a href="/en">Eng</a></li>--}}
     {{--                </ul>--}}
-            <x-block.socials />
+            <x-block.socials class="grid grid-cols-3" />
         </div>
     </div>
 </header>

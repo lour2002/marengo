@@ -1,6 +1,6 @@
 .cocktail {
   &__desc{
-    @apply overflow-hidden flex;
+    @apply overflow-hidden;
   }
 
   &__picture{
@@ -8,7 +8,6 @@
   }
 
   &__info {
-    max-width: 75%;
     padding: 20px 33px;
   }
 

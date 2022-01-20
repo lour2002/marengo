@@ -1,3 +1,4 @@
+@import "~slick-carousel/slick/slick";
 @import "../css/base.css";
 
 @import "variables";
@@ -48,7 +49,7 @@
 }
 
 .nav-arrow {
-  @apply border-none bg-white/0 bg-no-repeat ;
+  @apply border-none bg-white/0 bg-no-repeat;
   background-image: url("/images/icons/nav-arrow-blue.svg");
   width: 21px;
   height: 65px;
@@ -86,5 +87,5 @@ input#vermouth:checked ~ main [data-drink='vermouth']{
 }
 
 .container {
-  @apply mx-auto max-w-screen-xl px-x;
+  @apply mx-auto max-w-screen-xl px-2x;
 }

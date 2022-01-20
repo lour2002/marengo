@@ -1,22 +1,32 @@
-<section id="coctails" class="hidden py-32 items-center cocktails container">
+<section id="coctails" class="py-32 items-center grid cocktails container">
     <h2 class="visually-hidden">{{ __('Коктейлі') }}</h2>
 {{-- TODO: uncommited for step 2 --}}
 {{--                <select>--}}
 {{--                    <option value="all">{{ __('Усі коктейлі') }}</option>--}}
 {{--                    <option value="marengo-mojito">Marengo Mojito</option>--}}
 {{--                </select>--}}
-    <x-slider.nav class="mx-4" direction="backward" />
-    <ul class="cocktails__slide relative">
-        <li class="cocktail">
+    <x-slider.nav class="hidden md:block md:mx-4 js-slick-prev" direction="backward" />
+    <div class="relative">
+        <div class="grid grid-cols-2 gap-2x md:grid-cols-3 md:-mx-x md:px-x lg:grid-cols-5 js-slick-coctails ">
             {{-- TODO: entities [img] --}}
-            <img src="/images/coctail.png" alt="Сицилия Sicilia" width="227" height="526">
-            <article class="cocktail__desc cocktails__item-desc">
+            <img class="md:px-x" src="/images/coctail.png" alt="Сицилия Sicilia" width="227" height="526">
+            <img class="md:px-x" src="/images/coctail.png" alt="Сицилия Sicilia" width="227" height="526">
+            <img class="md:px-x" src="/images/coctail.png" alt="Сицилия Sicilia" width="227" height="526">
+            <img class="md:px-x" src="/images/coctail.png" alt="Сицилия Sicilia" width="227" height="526">
+            <img class="md:px-x" src="/images/coctail.png" alt="Сицилия Sicilia" width="227" height="526">
+            <img class="md:px-x" src="/images/coctail.png" alt="Сицилия Sicilia" width="227" height="526">
+            <img class="md:px-x" src="/images/coctail.png" alt="Сицилия Sicilia" width="227" height="526">
+            <img class="md:px-x" src="/images/coctail.png" alt="Сицилия Sicilia" width="227" height="526">
+        </div>
+        <ul class="hidden absolute top-0 h-full w-full">
+            <li class="cocktail">
+            <article class="cocktail__desc cocktails__item-desc flex">
                 {{-- TODO: entities [img] --}}
-                <img class="cocktail__picture" src="/images/coctail.png" alt="Сицилия Sicilia" width="227" height="526">
+                <img class="h-full object-cover flex-shrink-0" src="/images/coctail.png" alt="Сицилия Sicilia" width="227" height="526">
                 <div class="text-blue bg-white/88 overflow-auto">
                     <button class="close --blue absolute top-4 right-4" type="button"></button>
                     {{-- TODO: entities [string] --}}
-                    <div class="cocktail__info">
+                    <div class="cocktail__info xl:max-w-3/4">
                         <h3 class="recipe__title text-center">Сицилия <br> Sicilia</h3>
                         {{-- TODO: entities [text] --}}
                         <p class="text-justify">Сонячна Сицилія славиться своїми садами сицилійських апельсинів. Саме вони надихнули мастера Marengo (NAME) на створення вермута Di Fiore.</p>
@@ -90,26 +100,11 @@
                     <li>Охладить и наслаждаться этим ингредиентом в коктейле Сицилия</li>
                 </ul>
             </div>
-        </li>
-        <li>
-            {{-- TODO: entities [img] --}}
-            <img src="/images/coctail.png" alt="Сицилия Sicilia" width="227" height="526">
-        </li>
-        <li>
-            {{-- TODO: entities [img] --}}
-            <img src="/images/coctail.png" alt="Сицилия Sicilia" width="227" height="526">
-        </li>
-        <li>
-            {{-- TODO: entities [img] --}}
-            <img src="/images/coctail.png" alt="Сицилия Sicilia" width="227" height="526">
-        </li>
-        <li>
-            {{-- TODO: entities [img] --}}
-            <img src="/images/coctail.png" alt="Сицилия Sicilia" width="227" height="526">
-        </li>
-    </ul>
+            </li>
+        </ul>
+    </div>
 
 
 
-    <x-slider.nav class="mx-4" direction="forward" />
+    <x-slider.nav class="hidden md:block md:mx-4 js-slick-next" direction="forward" />
 </section>

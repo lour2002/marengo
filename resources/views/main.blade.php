@@ -23,7 +23,7 @@
 
         <x-layout.header />
 
-        <main class="pt-[60px] xl:pt-[55px]">
+        <main class="mt-[60px] xl:mt-[55px] bg-beige">
             <h1 class="visually-hidden">Marengo</h1>
             <x-section.bottles />
             <x-section.products />
@@ -35,5 +35,6 @@
 
         <x-modal.eighteen />
         {{-- Scripts --}}
+        <script src="{{ asset('js/app.js') }}"></script>
     </body>
 </html>

@@ -13,6 +13,10 @@ const mix = require('laravel-mix');
 
 require('mix-tailwindcss');
 
+mix.autoload({
+    jquery: ['$', 'window.jQuery']
+});
+
 mix.js('resources/js/app.js', 'public/js')
     .sass('resources/scss/app.scss', 'public/css')
     .tailwind();

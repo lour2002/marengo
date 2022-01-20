@@ -20,7 +20,7 @@
                     <div class="list-drinks__info-wrap w-full absolute z-20 bottom-x left-2/4 -translate-x-2/4 md:bottom-2x xl:bottom-4x xl:max-w-screen-md xl:px-x">
                         <div class="relative flex flex-col h-full xl:text-left">
                             {{-- TODO: entities [string] --}}
-                            <h3 class="drink-slide__title self-center font-normal text-lg text-white bg-blue/88 p-2x md:text-[36px] md:leiding-[44px] xl:self-start">Marengo Mojito</h3>
+                            <h3 class="drink-slide__title self-center font-normal text-lg text-white bg-blue/88 p-2x md:text-[36px] md:leiding-[44px] xl:self-start js-show-sku-info">Marengo Mojito</h3>
                             <button class="close --white hidden absolute top-4 right-4" type="button"></button>
                             {{-- TODO: entities [text] --}}
                             <div class="drink-slide__info hidden grow  p-2x  md:max-w-[458px] xl:block xl:static xl:max-w-none xl:bg-white/88 xl:text-blue">
@@ -46,7 +46,7 @@
 
                 {{-- Bottle --}}
                 {{-- TODO: entities [img, string] --}}
-                <img class="drink-slide__bottle absolute z-10 h-3/4 w-auto object-contain right-2/4 translate-x-2/4 translate-y-[10%] md:portrait:h-[65%] md:portrait:translate-y-1/4  xl:object-cover xl:right-1/4 xl:translate-y-0 3xl:z-30" src="/images/mojito_bottle.png" alt="Marengo Mojito" width="469" height="1038">
+                <img class="drink-slide__bottle absolute z-10 h-3/4 w-auto object-contain right-2/4 translate-x-2/4 translate-y-[10%] md:portrait:h-[65%] md:portrait:translate-y-1/4  xl:object-cover xl:right-1/4 xl:translate-y-0 3xl:z-20" src="/images/mojito_bottle.png" alt="Marengo Mojito" width="469" height="1038">
                 {{--                        <picture>--}}
                 {{-- TODO: entities [img] --}}
                 {{--                            <source srcset="" media="" sizes="">--}}

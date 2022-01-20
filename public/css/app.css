@@ -522,9 +522,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-top: auto;
   margin-bottom: auto;
 }
-.mx-4 {
-  margin-left: 1rem;
-  margin-right: 1rem;
+.mt-\[60px\] {
+  margin-top: 60px;
 }
 .mt-1 {
   margin-top: 0.25rem;
@@ -753,6 +752,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .gap-2x {
   gap: 20px;
 }
+.gap-4x {
+  gap: 40px;
+}
 .self-center {
   align-self: center;
 }
@@ -805,6 +807,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+.bg-beige {
+  --tw-bg-opacity: 1;
+  background-color: rgb(244 236 227 / var(--tw-bg-opacity));
 }
 .bg-beige\/85 {
   background-color: rgb(244 236 227 / .85);
@@ -911,8 +917,9 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-top: 8rem;
   padding-bottom: 8rem;
 }
-.pt-\[60px\] {
-  padding-top: 60px;
+.py-\[40px\] {
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
 .pl-3 {
   padding-left: 0.75rem;
@@ -991,6 +998,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .leading-7 {
   line-height: 1.75rem;
 }
+.leading-\[40px\] {
+  line-height: 40px;
+}
 .tracking-wide {
   letter-spacing: 0.025em;
 }
@@ -1058,11 +1068,17 @@ Ensure the default browser behavior of the `hidden` attribute.
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
 }
+.delay-300 {
+  transition-delay: 300ms;
+}
 .duration-100 {
   transition-duration: 100ms;
 }
 .ease-in {
   transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
+}
+.ease-in-out {
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .visually-hidden {
     position: absolute;
@@ -1145,6 +1161,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 @media (min-width: 1800px) {
 
+  .\33xl\:z-20 {
+    z-index: 20;
+  }
+
   .\33xl\:z-30 {
     z-index: 30;
   }
@@ -1162,6 +1182,16 @@ Ensure the default browser behavior of the `hidden` attribute.
   .md\:my-6 {
     margin-top: 1.5rem;
     margin-bottom: 1.5rem;
+  }
+
+  .md\:mx-4 {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  .md\:-mx-x {
+    margin-left: -10px;
+    margin-right: -10px;
   }
 
   .md\:ml-x {
@@ -1225,6 +1255,10 @@ Ensure the default browser behavior of the `hidden` attribute.
     transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   }
 
+  .md\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
   .md\:items-center {
     align-items: center;
   }
@@ -1243,6 +1277,15 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .md\:justify-self-end {
     justify-self: end;
+  }
+
+  .md\:p-x {
+    padding: 10px;
+  }
+
+  .md\:px-x {
+    padding-left: 10px;
+    padding-right: 10px;
   }
 
   .md\:pb-0 {
@@ -1316,6 +1359,14 @@ Ensure the default browser behavior of the `hidden` attribute.
     max-width: 550px;
   }
 
+  .lg\:grid-cols-5 {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+
+  .lg\:grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
   .lg\:items-center {
     align-items: center;
   }
@@ -1374,8 +1425,8 @@ Ensure the default browser behavior of the `hidden` attribute.
     right: 25%;
   }
 
-  .xl\:right-\[20\%\] {
-    right: 20%;
+  .xl\:mt-\[55px\] {
+    margin-top: 55px;
   }
 
   .xl\:block {
@@ -1398,20 +1449,16 @@ Ensure the default browser behavior of the `hidden` attribute.
     width: 25%;
   }
 
-  .xl\:w-4\/5 {
-    width: 80%;
-  }
-
-  .xl\:w-1\/5 {
-    width: 20%;
-  }
-
   .xl\:max-w-screen-md {
     max-width: 768px;
   }
 
   .xl\:max-w-none {
     max-width: none;
+  }
+
+  .xl\:max-w-\[550px\] {
+    max-width: 550px;
   }
 
   .xl\:translate-y-0 {
@@ -1421,6 +1468,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .xl\:justify-start {
     justify-content: flex-start;
+  }
+
+  .xl\:justify-center {
+    justify-content: center;
   }
 
   .xl\:self-start {
@@ -1436,13 +1487,13 @@ Ensure the default browser behavior of the `hidden` attribute.
        object-fit: cover;
   }
 
+  .xl\:p-2x {
+    padding: 20px;
+  }
+
   .xl\:px-x {
     padding-left: 10px;
     padding-right: 10px;
-  }
-
-  .xl\:pt-\[55px\] {
-    padding-top: 55px;
   }
 
   .xl\:pt-\[80px\] {
@@ -1478,6 +1529,93 @@ Ensure the default browser behavior of the `hidden` attribute.
       transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
     }
   }
+}
+
+/* Slider */
+.slick-slider {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  touch-action: pan-y;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.slick-list {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+.slick-list:focus {
+  outline: none;
+}
+.slick-list.dragging {
+  cursor: pointer;
+  cursor: hand;
+}
+
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+  transform: translate3d(0, 0, 0);
+}
+
+.slick-track {
+  position: relative;
+  left: 0;
+  top: 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.slick-track:before, .slick-track:after {
+  content: "";
+  display: table;
+}
+.slick-track:after {
+  clear: both;
+}
+.slick-loading .slick-track {
+  visibility: hidden;
+}
+
+.slick-slide {
+  float: left;
+  height: 100%;
+  min-height: 1px;
+  display: none;
+}
+[dir=rtl] .slick-slide {
+  float: right;
+}
+.slick-slide img {
+  display: block;
+}
+.slick-slide.slick-loading img {
+  display: none;
+}
+.slick-slide.dragging img {
+  pointer-events: none;
+}
+.slick-initialized .slick-slide {
+  display: block;
+}
+.slick-loading .slick-slide {
+  visibility: hidden;
+}
+.slick-vertical .slick-slide {
+  display: block;
+  height: auto;
+  border: 1px solid transparent;
+}
+
+.slick-arrow.slick-hidden {
+  display: none;
 }
 
 .close {
@@ -1725,7 +1863,7 @@ Ensure the default browser behavior of the `hidden` attribute.
   min-height: 100%;
   align-content: flex-start;
   --tw-bg-opacity: 1;
-  background-color: rgb(244 236 227 / var(--tw-bg-opacity));
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
   font-size: 16px;
   line-height: 20px;
 }
@@ -1735,52 +1873,24 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 /** Second screen */
 .sku-list {
-  grid-template-columns: 1fr;
+  grid-template-columns: minmax(0, 1fr);
 }
 @media (min-width: 768px) {
   .sku-list {
-    grid-template-columns: -webkit-min-content 1fr -webkit-min-content;
-    grid-template-columns: min-content 1fr min-content;
+    grid-template-columns: -webkit-min-content minmax(0, 1fr) -webkit-min-content;
+    grid-template-columns: min-content minmax(0, 1fr) min-content;
   }
-}
-
-.sku-slide{
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 20px;
-}
-
-@media (min-width: 768px){
-  .sku-slide{
-    grid-auto-flow: column;
-  }
-  .sku-slide{
-    grid-template-columns: none;
-  }
-  .sku-slide{
-    grid-template-rows: repeat(2, minmax(0, 1fr));
-  }
-}
-
-@media (min-width: 1024px){
-  .sku-slide{
-    gap: 40px;
-  }
-}
-
-.sku-item {
-  grid-template-rows: 200px 200px;
 }
 
 /** Third screen */
 .cocktails {
-  grid-template-columns: -webkit-min-content 1fr -webkit-min-content;
-  grid-template-columns: min-content 1fr min-content;
+  grid-template-columns: minmax(0, 1fr);
 }
-.cocktails__slide {
-  grid-column-gap: 33px;
-  display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
+@media (min-width: 768px) {
+  .cocktails {
+    grid-template-columns: -webkit-min-content minmax(0, 1fr) -webkit-min-content;
+    grid-template-columns: min-content minmax(0, 1fr) min-content;
+  }
 }
 .cocktails__item-desc{
   position: absolute;
@@ -1792,7 +1902,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 .cocktail__desc{
-  display: flex;
   overflow: hidden;
 }
 .cocktail__picture{
@@ -1801,7 +1910,6 @@ Ensure the default browser behavior of the `hidden` attribute.
      object-fit: cover;
 }
 .cocktail__info {
-  max-width: 75%;
   padding: 20px 33px;
 }
 .cocktail__recipe {
@@ -1919,6 +2027,6 @@ input#sparkling:checked ~ main [data-drink=sparkling], input#vermouth:checked ~ 
   margin-left: auto;
   margin-right: auto;
   max-width: 1280px;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
 }

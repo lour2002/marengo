@@ -1,15 +1,7 @@
 .sku-list {
-  grid-template-columns: 1fr;
+  grid-template-columns: minmax(0, 1fr);
 
   @include _md {
-    grid-template-columns: min-content 1fr min-content;
+    grid-template-columns: min-content minmax(0, 1fr) min-content;
   }
-}
-
-.sku-slide {
-  @apply grid grid-cols-2 gap-2x md:grid-rows-2 md:grid-flow-col md:grid-cols-none lg:gap-4x;
-}
-
-.sku-item {
-  grid-template-rows: 200px 200px;
 }

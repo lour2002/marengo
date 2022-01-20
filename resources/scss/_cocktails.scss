@@ -1,9 +1,9 @@
 .cocktails {
-  grid-template-columns: min-content 1fr min-content;
 
-  &__slide {
-    @apply grid grid-cols-5;
-    grid-column-gap: 33px;
+  grid-template-columns: minmax(0, 1fr);
+
+  @include _md {
+    grid-template-columns: min-content minmax(0, 1fr) min-content;
   }
 
   &__item-desc {

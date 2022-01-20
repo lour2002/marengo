@@ -1,5 +1,5 @@
 {{-- Modal 18+ TODO: to add '--show' class --}}
-<section class="modal fixed z-50 text-blue text-center w-screen h-screen">
+<section class="modal fixed z-50 text-blue text-center w-screen h-screen js-age-verification">
     <div class="absolute h-full w-full backdrop-blur bg-beige/85"></div>
     <div class="eighteen-modal__wrap overflow-auto relative z-50 h-full m-auto grid grid-flow-row justify-center gap-2x p-2x md:pb-4x md:gap-4x xl:pt-[80px] xl:pb-4x max-w-screen-lg">
         <h2 class="visually-hidden">{{ __('Підтвердження віку') }}</h2>
@@ -9,8 +9,8 @@
         <div>
             <p class="font-semibold text-mb md:text-lg">{{ __('Вам уже виповнилося 18 років?') }}</p>
             <div class="grid grid-cols-2 gap-2x lg:gap-4x">
-                <button type="button" class="w-full max-w-[180px] h-4x md:h-[55px] border-2 border-solid text-mb leading-4x md:leading-[55px] justify-self-center md:justify-self-end text-red border-red">{{ __('Ні') }}</button>
-                <button type="button" class="w-full max-w-[180px] h-4x md:h-[55px] border-2 border-solid text-mb leading-4x md:leading-[55px] justify-self-center md:justify-self-start text-white bg-blue border-blue">{{ __('Так') }}</button>
+                <button type="button" data-value="no" class="w-full max-w-[180px] h-4x md:h-[55px] border-2 border-solid text-mb leading-4x md:leading-[55px] justify-self-center md:justify-self-end text-red border-red js-btn">{{ __('Ні') }}</button>
+                <button type="button" data-value="yes" class="w-full max-w-[180px] h-4x md:h-[55px] border-2 border-solid text-mb leading-4x md:leading-[55px] justify-self-center md:justify-self-start text-white bg-blue border-blue js-btn">{{ __('Так') }}</button>
             </div>
 {{-- TODO: uncommented for step 2 --}}
         {{-- TODO: localisation --}}
